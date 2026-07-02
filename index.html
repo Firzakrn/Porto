@@ -1,248 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Beranda</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700;900&family=Montserrat:wght@800;900&family=JetBrains+Mono:ital,wght@0,300;0,500;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@700;900&family=Montserrat:wght@800;900&family=JetBrains+Mono:ital,wght@0,300;0,500;0,700;0,800;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-intro">
+    <div class="canvas-wrapper">
+      <div class="canvas-content">
+        <div id="header-placeholder"></div>
 
-  <style>
-    /* Reset & Base Variables */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-   body {
-    background: #000;
-    width: 100vw; height: 100vh;
-    display: flex; justify-content: center; align-items: center;
-    overflow: hidden;
-  }
+        <img src="/images/accessories-3.png" class="hiasan acc-3" alt="" />
+        <img src="/images/accessories-4.png" class="hiasan acc-4" alt="" />
+        <img src="/images/accessories-3.png" class="hiasan acc-5" alt="" />
 
-  .canvas-wrapper {
-    width: 100vw; height: 100vh;
-    display: flex; justify-content: center; align-items: center;
-    background: linear-gradient(110.23deg, #F4D839 46.51%, #FFEF96 85.53%);
-    overflow: hidden;
-  }
+        <div
+          id="content"
+          style="position: absolute; left: 196px; top: 430px; width: 362px"
+          class="animate-paper-wipe"
+        >
+          <div
+            style="
+              position: absolute;
+              left: 95px;
+              top: 32px;
+              width: 156.75px;
+              border-top: 2.8px solid #000;
+              transform: rotate(-6deg);
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              left: 107px;
+              top: 38px;
+              width: 156.75px;
+              border-top: 2.8px solid #000;
+              transform: rotate(-6deg);
+            "
+          ></div>
 
-  .canvas-content {
-    width: 1280px; height: 824px; position: relative;
-    /* Skala otomatis menyesuaikan lebar/tinggi layar */
-    transform: scale(min(calc(100vw / 1280), calc(100vh / 824)));
-    transform-origin: center;
-  }
+          <h3 style="font-weight: 800; font-size: 30px; color: #000">
+            I'm Firzakarin
+          </h3>
 
-    /* ============ Typography Utility ============ */
-    .font-handjet { font-family: 'Handjet', monospace; font-weight: 900; }
-    .font-montserrat { font-family: 'Montserrat', sans-serif; font-weight: 900; }
-    
-    /* ============ Hero / Head ============ */
-    .hero-black-band { position: absolute; left: 0; top: 11px; width: 1280px; height: 193px; background: #000; }
-    .hero-orange-band { position: absolute; left: 0; top: 0; width: 1280px; height: 193px; background: #FF7A5B; }
-    .nav-divider { position: absolute; left: 0; top: 185px; width: 1280px; border-top: 4px solid #000; z-index: 3; }
-
-    /* ============ Hiasan & Assets ============ */
-    .hiasan { position: absolute; z-index: 2; }
-    .acc-1 { left: 8px; top: 6px; width: 110px; }
-    .acc-2 { left: 1045px; top: -45px; width: 260px; }
-    .acc-3 { left: 18px; top: 210px; width: 46px; }
-    .acc-4 { left: 30px; top: 400px; width: 26px; }
-    .acc-5 { left: 18px; top: 440px; width: 46px; }
-    .eyes { left: 1080px; top: 267px; width: 139px; cursor: pointer; transition: transform 0.2s; }
-    .eyes:active { transform: scaleY(0.1); } 
-    .bead { left: 44px; top: 486px; width: 40px; }
-
-    /* ============ Shadow Box Component ============ */
-    .shadow-box { position: relative; display: inline-block; }
-    .shadow-bg { position: absolute; background: #000; }
-    .shadow-content {
-      position: absolute;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      border: 1.63px solid #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-
-    /* ============ Pull Cord Animasi CSS ============ */
-    .pull-cord {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      cursor: grab;
-      position: absolute;
-      top: 0; /* Semua tali kini benar-benar nempel pada titik top (garis nav) */
-    }
-    
-    .cord-line {
-      width: 4px;
-      background: #FF795C;
-      /* Animasi hanya pada tinggi tali, kotakan di ujung otomatis ikut */
-      transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    
-    .cord-handle {
-      transition: transform 0.1s; /* Hanya untuk efek ditekan */
-    }
-    
-    /* Efek Hover: tali memanjang sedikit */
-    .pull-cord:hover .cord-line.intro { height: 150px !important; }
-    .pull-cord:hover .cord-line.proj { height: 50px !important; }
-    .pull-cord:hover .cord-line.cont { height: 60px !important; }
-    
-    /* Efek Active (Klik): tali memanjang maksimal */
-    .pull-cord:active { cursor: grabbing; }
-    .pull-cord:active .cord-line.intro { height: 160px !important; }
-    .pull-cord:active .cord-line.proj { height: 70px !important; }
-    .pull-cord:active .cord-line.cont { height: 80px !important; }
-    .pull-cord:active .cord-handle { transform: scale(1.02); }
-
-  </style>
-</head>
-<body>
-
-  <div class="canvas-wrapper">
-    <div class="canvas-content">
-      
-      <div class="hero-black-band"></div>
-      <div class="hero-orange-band"></div>
-      
-      <img src="/images/accessories-1.png" class="hiasan acc-1" alt="">
-      <img src="/images/accessories-2.png" class="hiasan acc-2" alt="">
-      <img src="/images/accessories-3.png" class="hiasan acc-3" alt="">
-      <img src="/images/accessories-4.png" class="hiasan acc-4" alt="">
-      <img src="/images/accessories-3.png" class="hiasan acc-5" alt="">
-      <img src="/images/eyes.png" class="hiasan eyes" alt="">
-
-      <div style="position: absolute; left: 0; top: 6px; width: 1280px; z-index: 3; display: flex; flex-direction: column; align-items: center;">
-        
-        <div style="display: flex; align-items: flex-end; gap: 16px;">
-            <span class="font-handjet" style="font-size: 88px; line-height: 80px; color: #FFF; text-shadow: 10px 10px 0px #000;">
-              WELCOME
-            </span>
-
-          <div style="position: relative; display: inline-block; margin-bottom: 2px;">
-            <span class="font-handjet" style="font-size: 64px; line-height: 64px; color: #000; -webkit-text-stroke: 18px #000; position: absolute; left: 0; top: 0; z-index: 1;">TO</span>
-            <span class="font-handjet" style="font-size: 64px; line-height: 64px; color: #FFF; position: relative; z-index: 2;">TO</span>
-          </div>
-        </div>
-
-        <div style="display: flex; align-items: center; gap: 14px; margin-top: 0px;">
-          <div class="shadow-box" style="width: 112px; height: 64px; transform: rotate(-4deg);">
-            <div class="shadow-bg" style="left: 5px; top: 5px; width: 100%; height: 100%;"></div>
-            <div class="shadow-content" style="background: #FFF; border-width: 2.15px;">
-              <span style="font-weight: 700; font-size: 48px; letter-spacing: -0.07em; color: #FE2828;">MY</span>
-            </div>
-          </div>
-          <span style="font-weight: 800; font-style: italic; font-size: 62px; line-height: 62px; letter-spacing: -0.05em;">
-            PORTOFOLIO
-          </span>
-        </div>
-      </div>
-
-      <div class="nav-divider"></div>
-      
-      <div style="position: absolute; left: 0; top: 185px; width: 1280px; z-index: 4;">
-        
-        <a href="#introduction" class="pull-cord" style="left: 189px;">
-          <div class="cord-line intro" style="height: 130px;"></div>
-          <div class="cord-handle shadow-box" style="width: 249px; height: 46px;">
-            <div class="shadow-bg" style="left: 6px; top: 5.5px; width: 100%; height: 100%;"></div>
-            <div class="shadow-content" style="background: #FF7A5B;">
-              <span class="font-montserrat" style="font-size: 20px; color: #000;">INTRODUCTION</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="#project" class="pull-cord" style="left: 573px;">
-          <div class="cord-line proj" style="height: 35px;"></div>
-          <div class="cord-handle shadow-box" style="width: 169px; height: 46px;">
-            <div class="shadow-bg" style="left: 5px; top: 5px; width: 100%; height: 100%;"></div>
-            <div class="shadow-content" style="background: #FFF;">
-              <span class="font-montserrat" style="font-size: 20px; color: #000;">PROJECT</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="#contact" class="pull-cord" style="left: 837px;">
-          <div class="cord-line cont" style="height: 40px;"></div>
-          <div class="cord-handle shadow-box" style="width: 169px; height: 46px;">
-            <div class="shadow-bg" style="left: 5px; top: 5px; width: 100%; height: 100%;"></div>
-            <div class="shadow-content" style="background: #FFF;">
-              <span class="font-montserrat" style="font-size: 20px; color: #000;">CONTACT</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div id="introduction" style="position: absolute; left: 196px; top: 430px; width: 362px;">
-        <div style="position: absolute; left: 185px; top: 26px; width: 156.75px; border-top: 2.8px solid #000; transform: rotate(-6deg);"></div>
-        <div style="position: absolute; left: 197px; top: 32px; width: 156.75px; border-top: 2.8px solid #000; transform: rotate(-6deg);"></div>
-        
-        <h3 style="font-weight: 800; font-size: 30px; color: #000;">I'm Firzakarin</h3>
-        
-        <div style="display: inline-block; margin-top: 12px; padding: 4px 10px; background: #FFF; border: 2px solid #000; font-weight: 300; font-style: italic; font-size: 16px;">
-          Year 5 Uni Student!
-        </div>
-        
-        <p style="margin-top: 16px; width: 354px; font-weight: 500; font-size: 20px; line-height: 28px;">
-          I like design and do some code. Right now im looking for experience & opportunity to learn AI!
-        </p>
-        
-        <div style="margin-top: 8px;">
-          <div class="shadow-box" style="width: 231px; height: 58px;">
-            <div class="shadow-bg" style="left: 6px; top: 5.5px; width: 100%; height: 100%;"></div>
-            <div class="shadow-content" style="background: #88CDEA; border: 1.4px solid #000;">
-              <span style="font-weight: 800; font-size: 20px;">More about me!</span>
-            </div>
-          </div>
-        </div>
-
-        <img src="/images/foto.png" style="position: absolute; left: 380px; top: 0px; width: 140px; height: 170px; border: 3px solid #000; object-fit: cover;" alt="Foto Profil">
-
-      </div>
-
-      tambahkan foto.png di sebelah kiri place order dan di kanan introduction
-
-      <div id="contact" style="position: absolute; left: 922px; top: 371px; width: 330px; height: 425px;">
-        <div style="position: absolute; left: 15px; top: 16px; width: 100%; height: 100%; background: #000;"></div>
-        
-        <div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #FFEE8F; border: 3px solid #000; box-sizing: border-box;">
-          
-          <img src="/images/bunny.png" style="position: absolute; left: 23px; top: 27px; width: 60px; height: 60px;" alt="">
-          
-          <div style="position: absolute; left: 113px; top: 30px; width: 190px;">
-            <span class="font-handjet" style="position: absolute; left: 3px; top: 4px; font-size: 30px; line-height: 32px; color: #000;">
-              PLACE YOUR ORDER
-            </span>
-            <span class="font-handjet" style="position: relative; font-size: 30px; line-height: 32px; color: #FFF;">
-              PLACE YOUR ORDER
-            </span>
+          <div
+            style="
+              display: inline-block;
+              margin-top: 4px;
+              padding: 4px 10px;
+              background: #fff;
+              border: 2px solid #000;
+              font-weight: 300;
+              font-style: italic;
+              font-size: 16px;
+            "
+          >
+            Year 5 Uni Student!
           </div>
 
-          <p style="position: absolute; left: 36px; top: 138px; width: 260px; font-weight: 500; font-size: 20px; line-height: 28px;">
-            Im open for website building. The price scaling from the feature and page you need. We can discuss it further.
+          <p
+            style="
+              margin-top: 16px;
+              width: 354px;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 28px;
+            "
+          >
+            I like design and do some code. Right now im looking for experience
+            & opportunity to learn AI!
           </p>
 
-          <div style="position: absolute; left: 36px; top: 337px;">
-            <div class="shadow-box" style="width: 231px; height: 58px;">
-              <div class="shadow-bg" style="left: 6px; top: 5.5px; width: 100%; height: 100%;"></div>
-              <div class="shadow-content" style="background: #90ED90; border: 1.4px solid #000;">
-                <span style="font-weight: 800; font-size: 20px;">ORDER NOW!</span>
+          <div style="margin-top: 8px">
+            <div
+              class="shadow-box group"
+              style="width: 231px; height: 58px; transition: transform 0.3s"
+            >
+              <div
+                class="shadow-bg"
+                style="left: 6px; top: 5.5px; width: 100%; height: 100%"
+              ></div>
+              <div
+                class="shadow-content"
+                style="background: #88cdea; border: 1.4px solid #000"
+              >
+                <a
+                  href="porto.html"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    font-weight: 800;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: #000;
+                  "
+                  >More about me!
+                </a>
               </div>
             </div>
           </div>
-
         </div>
+
+        <img
+          src="/images/foto.png"
+          style="
+            position: absolute;
+            left: 540px;
+            top: 280px;
+            width: 400px;
+            height: 480px;
+            object-fit: contain;
+            z-index: 3;
+          "
+          alt="Foto Profil"
+        />
+
+        <div
+          id="zoom-notice"
+          style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: #000;
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-family: &quot;JetBrains Mono&quot;, monospace;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            max-width: 320px;
+          "
+        >
+          <span
+            >For best experience, please zoom your chrome to 67% with ctrl & +
+            or -</span
+          >
+          <button
+            onclick="document.getElementById('zoom-notice').remove()"
+            style="
+              background: none;
+              border: none;
+              color: #fff;
+              font-size: 18px;
+              cursor: pointer;
+              line-height: 1;
+              flex-shrink: 0;
+            "
+          >
+            &times;
+          </button>
+        </div>
+
+        <div
+          id="contact"
+          style="
+            position: absolute;
+            left: 922px;
+            top: 371px;
+            width: 330px;
+            height: 425px;
+          "
+        >
+          <div
+            style="
+              position: absolute;
+              left: 15px;
+              top: 16px;
+              width: 100%;
+              height: 100%;
+              background: #000;
+            "
+          ></div>
+
+          <div
+            style="
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background: #ffee8f;
+              border: 3px solid #000;
+              box-sizing: border-box;
+            "
+          >
+            <img
+              src="/images/bunny.png"
+              style="
+                position: absolute;
+                left: 23px;
+                top: 27px;
+                width: 80px;
+                height: 80px;
+              "
+              alt=""
+            />
+
+            <div
+              style="position: absolute; left: 113px; top: 30px; width: 190px"
+            >
+              <span
+                class="font-handjet"
+                style="
+                  position: absolute;
+                  left: 3px;
+                  top: 4px;
+                  font-size: 45px;
+                  line-height: 32px;
+                  color: #000;
+                "
+              >
+                PLACE YOUR ORDER
+              </span>
+              <span
+                class="font-handjet"
+                style="
+                  position: relative;
+                  font-size: 45px;
+                  line-height: 32px;
+                  color: #fff;
+                "
+              >
+                PLACE YOUR ORDER
+              </span>
+            </div>
+
+            <p
+              style="
+                position: absolute;
+                left: 36px;
+                top: 138px;
+                width: 260px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+              "
+            >
+              Im open for website building. The price scaling from the feature
+              and page you need. We can discuss it further.
+            </p>
+
+            <div style="position: absolute; left: 36px; top: 300px">
+              <a
+                href="contact.html"
+                onclick="
+                  localStorage.setItem(
+                    'contact-form-data',
+                    JSON.stringify({
+                      name: '',
+                      email: '',
+                      topic: 'Recruit / order',
+                      message: '',
+                    }),
+                  )
+                "
+                class="shadow-box group"
+                style="
+                  width: 231px;
+                  height: 58px;
+                  display: block;
+                  text-decoration: none;
+                "
+              >
+                <div
+                  class="shadow-bg"
+                  style="left: 6px; top: 5.5px; width: 100%; height: 100%"
+                ></div>
+                <div
+                  class="shadow-content"
+                  style="background: #90ed90; border: 1.4px solid #000"
+                >
+                  <span style="font-weight: 800; font-size: 20px"
+                    >ORDER NOW!</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="project"
+          style="
+            position: absolute;
+            left: 573px;
+            top: 400px;
+            width: 1px;
+            height: 1px;
+          "
+        ></div>
       </div>
-
-      <div id="project" style="position: absolute; left: 573px; top: 400px; width: 1px; height: 1px;"></div>
-
     </div>
-  </div>
 
-</body>
+    <script>
+      fetch("head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,371 @@
+/* Reset & Base Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(110.23deg, #f4d839 46.51%, #ffef96 85.53%);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.canvas-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(110.23deg, #f4d839 46.51%, #ffef96 85.53%);
+}
+
+.canvas-content {
+  width: 1280px;
+  height: 824px;
+  position: relative;
+  transform: scale(min(calc(80vw / 1280), calc(80vh / 824)));
+  transform-origin: center;
+}
+
+@layer utilities {
+  .animate-paper-wipe {
+    z-index: 1;
+    animation: paperWipe 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+  }
+}
+
+@keyframes paperWipe {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ============ Typography Utility ============ */
+.font-handjet {
+  font-family: "Handjet", monospace;
+  font-weight: 900;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+/* ============ Hero / Head ============ */
+.hero-black-band {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 1280px;
+  height: 193px;
+  background: #000;
+  z-index: 6;
+}
+.hero-orange-band {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 193px;
+  background: #ff7a5b;
+  z-index: 7;
+}
+
+/* ============ Hiasan & Assets ============ */
+.hiasan {
+  position: absolute;
+  z-index: 2;
+}
+.acc-1 {
+  left: 8px;
+  top: 6px;
+  width: 230px;
+}
+.acc-2 {
+  left: 1045px;
+  top: -45px;
+  width: 260px;
+}
+.acc-3 {
+  left: 18px;
+  top: 210px;
+  width: 100px;
+}
+.acc-4 {
+  left: 30px;
+  top: 502px;
+  width: 60px;
+}
+.acc-5 {
+  left: 18px;
+  top: 580px;
+  width: 100px;
+}
+.eyes {
+  left: 1080px;
+  top: 267px;
+  width: 139px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.eyes:active {
+  transform: scaleY(0.1);
+}
+.bead {
+  left: 44px;
+  top: 486px;
+  width: 40px;
+}
+
+/* ============ Shadow Box Component ============ */
+.shadow-box {
+  position: relative;
+  display: inline-block;
+}
+.shadow-bg {
+  position: absolute;
+  background: #000;
+}
+.shadow-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.63px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  transition: transform 0.4s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+}
+
+.group:hover .shadow-content {
+  transform: translate(4px, 4px);
+}
+.group:active .shadow-content {
+  transform: translate(6px, 6px);
+  transition: transform 0.1s;
+}
+
+/* ============ Pull Cord Animasi CSS ============ */
+.pull-cord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: grab;
+  position: absolute;
+  top: 0;
+}
+
+.cord-line {
+  width: 4px;
+  background: #ff795c;
+  transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cord-handle {
+  transition: transform 0.1s;
+}
+
+/* Efek Hover tali */
+.pull-cord:hover .cord-line.intro {
+  height: 150px !important;
+}
+.pull-cord:hover .cord-line.proj {
+  height: 50px !important;
+}
+.pull-cord:hover .cord-line.cont {
+  height: 60px !important;
+}
+
+.pull-cord:active {
+  cursor: grabbing;
+}
+.pull-cord:active .cord-line.intro {
+  height: 160px !important;
+}
+.pull-cord:active .cord-line.proj {
+  height: 70px !important;
+}
+.pull-cord:active .cord-line.cont {
+  height: 80px !important;
+}
+.pull-cord:active .cord-handle {
+  transform: scale(1.02);
+}
+
+/* ============ State Aktif Navbar ============ */
+
+/* 1. Kondisi Default */
+.pull-cord .shadow-content {
+  background: #fff;
+}
+.cord-line.intro {
+  height: 35px;
+}
+.cord-line.proj {
+  height: 35px;
+}
+.cord-line.cont {
+  height: 40px;
+}
+
+.pull-cord:hover .cord-line.intro {
+  height: 90px !important;
+}
+.pull-cord:hover .cord-line.proj {
+  height: 90px !important;
+}
+.pull-cord:hover .cord-line.cont {
+  height: 95px !important;
+}
+
+/* 2. Kondisi Aktif di page introduction */
+body.page-intro .nav-intro .cord-line.intro {
+  height: 130px !important;
+}
+body.page-intro .nav-intro .shadow-content {
+  background: #ff7a5b !important;
+}
+body.page-intro .nav-intro:hover .cord-line.intro {
+  height: 145px !important;
+}
+
+/* 3. Kondisi Aktif di Halaman Project */
+body.page-project .nav-project .cord-line.proj {
+  height: 130px !important;
+}
+body.page-project .nav-project .shadow-content {
+  background: #ff7a5b !important;
+}
+body.page-project .nav-project:hover .cord-line.proj {
+  height: 145px !important;
+}
+
+/* 4. Kondisi Aktif di Halaman Contact */
+body.page-contact .nav-contact .cord-line.cont {
+  height: 130px !important;
+}
+body.page-contact .nav-contact .shadow-content {
+  background: #ff7a5b !important;
+}
+body.page-contact .nav-contact:hover .cord-line.cont {
+  height: 145px !important;
+}
+
+body.page-project .nav-intro .cord-line.intro {
+  height: 60px;
+}
+body.page-project .nav-contact .cord-line.cont {
+  height: 60px;
+}
+body.page-project .nav-intro:hover .cord-line.intro {
+  height: 110px !important;
+}
+body.page-project .nav-contact:hover .cord-line.cont {
+  height: 110px !important;
+}
+
+/* ============ Porto paper Component ============ */
+.main-box {
+  position: absolute;
+  left: 100px;
+  top: 320px;
+  width: 1100px;
+  height: auto;
+  min-height: 1000px;
+  background: #fff;
+  border: 2.5px solid #000;
+  padding: 30px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.inner-box {
+  width: 630px;
+  border: 2.5px solid #000;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-card-wrapper {
+  position: absolute;
+  left: 770px;
+  top: 325px;
+  width: 400px;
+  height: 430px;
+  z-index: 5;
+}
+
+.ip-badge-wrapper {
+  position: absolute;
+  left: 800px;
+  top: 620px;
+  width: 280px;
+  height: 75px;
+  z-index: 6;
+  transform: rotate(-4deg);
+}
+
+/* =========== Project ============ */
+.bg-grid-pattern {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, #000 2px, transparent 2px),
+    linear-gradient(to bottom, #000 2px, transparent 2px);
+}
+
+/* =========== Contact ============ */
+
+.envelope-container {
+  min-width: 320px;
+  width: 100%;
+}
+
+.envelope-skin {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.form-content {
+  background: white;
+  border: 4px solid #000000;
+  box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+  position: relative;
+  z-index: 10;
+  margin: 20px;
+  min-height: 600px;
+}
+
+input,
+textarea,
+select {
+  border: 2px solid #000000 !important;
+  padding: 10px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+button:hover {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 768px) {
+  .form-content {
+    padding: 20px;
+  }
+  input {
+    width: 100% !important;
+  }
+}
