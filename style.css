@@ -16,7 +16,6 @@ body {
 .canvas-wrapper {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(110.23deg, #f4d839 46.51%, #ffef96 85.53%);
   display: flex;
   justify-content: center;
 }
