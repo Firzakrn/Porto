@@ -26,182 +26,187 @@
       <div class="canvas-content">
         <div id="header-placeholder"></div>
         <div
-          class="relative w-[1035px] mx-auto mt-[400px] h-[650px] animate-paper-wipe"
+          class="w-full flex justify-center scale-[0.80] origin-top mt-[400px]"
         >
-          tolong skala ukurannya dari sini sampe kebawah dikecilin bisa gk
-          <svg
-            width="1035"
-            height="371"
-            viewBox="0 0 1035 371"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute left-1/2 -translate-x-1/2 top-[-190px] z-1"
-          >
-            <path
-              d="M1031.79 369.5H3.11523L517.45 1.22949L1031.79 369.5Z"
-              fill="#D9D9D9"
-              stroke="black"
-              stroke-width="2"
-            />
-          </svg>
+          <div class="relative w-[1035px] h-[500px] animate-paper-wipe">
+            <svg
+              width="1035"
+              height="371"
+              viewBox="0 0 1035 371"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute left-1/2 -translate-x-1/2 top-[-190px] z-1"
+            >
+              <path
+                d="M1031.79 369.5H3.11523L517.45 1.22949L1031.79 369.5Z"
+                fill="#D9D9D9"
+                stroke="black"
+                stroke-width="2"
+              />
+            </svg>
 
-          <div
-            class="absolute left-1/2 -translate-x-1/2 top-[-30px] w-[1100px] h-[600px] bg-white border-[5px] border-black z-2 p-10 pb-0 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] flex flex-col"
-          >
-            <div class="flex justify-between items-start mb-8">
-              <div>
-                <h3 class="font-mono text-3xl font-bold mb-3">From:</h3>
+            <!-- White Paper Form -->
+            <div
+              class="absolute left-1/2 -translate-x-1/2 top-[-30px] w-[1100px] h-[600px] bg-white border-[5px] border-black z-2 p-10 pb-0 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] flex flex-col"
+            >
+              <div class="flex justify-between items-start mb-8">
+                <div>
+                  <h3 class="font-mono text-3xl font-bold mb-3">From:</h3>
+                  <div
+                    class="shadow-box group"
+                    style="width: 320px; height: 80px"
+                  >
+                    <div
+                      class="shadow-bg"
+                      style="left: 6px; top: 6px; width: 100%; height: 100%"
+                    ></div>
+                    <div
+                      class="shadow-content bg-white border-[2.5px] border-black flex flex-col justify-center p-2 gap-1 pointer-events-auto"
+                    >
+                      <input
+                        id="contact-name"
+                        type="text"
+                        placeholder="Nama"
+                        class="font-mono border border-black px-2 py-0.5 outline-none text-sm w-[90%]"
+                      />
+                      <input
+                        id="contact-email"
+                        type="email"
+                        placeholder="Email"
+                        class="font-mono border border-black px-2 py-0.5 outline-none text-sm w-[90%]"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <div
-                  class="shadow-box group"
-                  style="width: 320px; height: 80px"
+                  id="today-date"
+                  class="font-mono text-2xl mt-2 tracking-tight"
+                ></div>
+              </div>
+
+              <div class="flex justify-between items-end mb-6 z-20">
+                <div
+                  class="shadow-box group cursor-pointer"
+                  style="width: 350px; height: 50px"
                 >
                   <div
                     class="shadow-bg"
                     style="left: 6px; top: 6px; width: 100%; height: 100%"
                   ></div>
                   <div
-                    class="shadow-content bg-white border-[2.5px] border-black flex flex-col justify-center p-2 gap-1 pointer-events-auto"
+                    class="shadow-content bg-white border-[2.5px] border-black relative pointer-events-auto hover:translate-x-[2px] hover:translate-y-[2px] transition-transform"
                   >
-                    <input
-                      id="contact-name"
-                      type="text"
-                      placeholder="Nama"
-                      class="font-mono border border-black px-2 py-0.5 outline-none text-sm w-[90%]"
-                    />
-                    <input
-                      id="contact-email"
-                      type="email"
-                      placeholder="Email"
-                      class="font-mono border border-black px-2 py-0.5 outline-none text-sm w-[90%]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                id="today-date"
-                class="font-mono text-2xl mt-2 tracking-tight"
-              ></div>
-            </div>
-
-            <div class="flex justify-between items-end mb-6 z-20">
-              <div
-                class="shadow-box group cursor-pointer"
-                style="width: 350px; height: 50px"
-              >
-                <div
-                  class="shadow-bg"
-                  style="left: 6px; top: 6px; width: 100%; height: 100%"
-                ></div>
-                <div
-                  class="shadow-content bg-white border-[2.5px] border-black relative pointer-events-auto hover:translate-x-[2px] hover:translate-y-[2px] transition-transform"
-                >
-                  <div class="relative w-full h-full">
-                    <select
-                      id="contact-topic"
-                      class="relative z-10 w-full h-full font-mono font-bold text-xl px-4 appearance-none outline-none cursor-pointer bg-transparent"
-                    >
-                      <option value="What's it about?">What's it about?</option>
-                      <option value="Recruit / order">Recruit / order</option>
-                      <option value="Comment">Comment</option>
-                      <option value="Complain">Complain</option>
-                      <option value="Suggestion">Suggestion</option>
-                    </select>
-                    <div
-                      class="absolute inset-y-0 right-0 border-l-[2.5px] border-black w-14 flex items-center justify-center text-2xl pointer-events-none"
-                    >
-                      <i class="fas fa-chevron-down"></i>
+                    <div class="relative w-full h-full">
+                      <select
+                        id="contact-topic"
+                        class="relative z-10 w-full h-full font-mono font-bold text-xl px-4 appearance-none outline-none cursor-pointer bg-transparent"
+                      >
+                        <option value="What's it about?">
+                          What's it about?
+                        </option>
+                        <option value="Recruit / order">Recruit / order</option>
+                        <option value="Comment">Comment</option>
+                        <option value="Complain">Complain</option>
+                        <option value="Suggestion">Suggestion</option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 border-l-[2.5px] border-black w-14 flex items-center justify-center text-2xl pointer-events-none"
+                      >
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <div class="flex gap-2">
+                  <a
+                    href="https://github.com/Firzakrn"
+                    class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-3xl text-black"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/kars.gatito?igsh=MThhOHU0bmFxdHhkaw=="
+                    class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-3xl text-black"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.tiktok.com/@kars.gatito"
+                    class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-3xl text-black"
+                    ><i class="fab fa-tiktok"></i
+                  ></a>
+                  <a
+                    href="mailto:firzakrn@gmail.com"
+                    class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-2xl text-black"
+                    ><i class="fas fa-envelope"></i
+                  ></a>
+                </div>
               </div>
 
-              <div class="flex gap-2">
-                <a
-                  href="https://github.com/Firzakrn"
-                  class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-3xl text-black"
-                  ><i class="fab fa-github"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/kars.gatito?igsh=MThhOHU0bmFxdHhkaw=="
-                  class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-3xl text-black"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a
-                  href="https://www.tiktok.com/@kars.gatito"
-                  class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-3xl text-black"
-                  ><i class="fab fa-tiktok"></i
-                ></a>
-                <a
-                  href="mailto:firzakrn@gmail.com"
-                  class="w-12 h-12 border-[2.5px] border-black flex items-center justify-center bg-white hover:bg-gray-200 transition-colors text-2xl text-black"
-                  ><i class="fas fa-envelope"></i
-                ></a>
+              <div class="flex justify-center">
+                <textarea
+                  id="contact-message"
+                  class="w-[90%] max-w-[900px] h-[400px] bg-[#E5E5E5] border-[2.5px] border-black p-5 font-mono text-xl outline-none resize-none pointer-events-auto z-20"
+                  placeholder="Send me your thoughts..."
+                ></textarea>
               </div>
             </div>
 
-            <div class="flex justify-center">
-              <textarea
-                id="contact-message"
-                class="w-[90%] max-w-[900px] h-[400px] bg-[#E5E5E5] border-[2.5px] border-black p-5 font-mono text-xl outline-none resize-none pointer-events-auto z-20"
-                placeholder="Send me your thoughts..."
-              ></textarea>
-            </div>
-          </div>
-
-          <svg
-            width="1281"
-            height="460"
-            viewBox="0 0 1281 424"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute left-1/2 -translate-x-1/2 top-[200px] z-30 pointer-events-none"
-          >
-            <path
-              d="M728.178 462.999L1230.12 462.999L1230.12 244.145L1230.11 15.577L728.178 462.999Z"
-              fill="#F8F8F8"
-              stroke="black"
-              stroke-width="5"
-            />
-            <path
-              d="M587.839 452.999L85.9009 452.999L85.9013 229L85.9013 5.57732L587.839 452.999Z"
-              fill="#F8F8F8"
-              stroke="black"
-              stroke-width="5"
-            />
-            <path
-              d="M1146.17 585H126.835L636.5 220.073L1146.17 585Z"
-              fill="white"
-              stroke="black"
-              stroke-width="5"
-            />
-          </svg>
-        </div>
-        <button
-          id="send-button"
-          type="button"
-          style="
-            position: absolute;
-            left: 520px;
-            top: 850px;
-            z-index: 100;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-          "
-        >
-          <div class="shadow-box group" style="width: 231px; height: 58px">
-            <div
-              class="shadow-bg"
-              style="left: 6px; top: 5.5px; width: 100%; height: 100%"
-            ></div>
-            <div
-              class="shadow-content"
-              style="background: #fe2828; border: 1.4px solid #000"
+            <!-- SVG Envelope Front -->
+            <svg
+              width="1281"
+              height="460"
+              viewBox="0 0 1281 424"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute left-1/2 -translate-x-1/2 top-[200px] z-30 pointer-events-none"
             >
-              <span style="font-weight: 800; font-size: 20px">SEND</span>
-            </div>
+              <path
+                d="M728.178 462.999L1230.12 462.999L1230.12 244.145L1230.11 15.577L728.178 462.999Z"
+                fill="#F8F8F8"
+                stroke="black"
+                stroke-width="5"
+              />
+              <path
+                d="M587.839 452.999L85.9009 452.999L85.9013 229L85.9013 5.57732L587.839 452.999Z"
+                fill="#F8F8F8"
+                stroke="black"
+                stroke-width="5"
+              />
+              <path
+                d="M1146.17 585H126.835L636.5 220.073L1146.17 585Z"
+                fill="white"
+                stroke="black"
+                stroke-width="5"
+              />
+            </svg>
+
+            <!-- TOMBOL SEND (Sekarang dipindah ke dalam wrapper amplop) -->
+            <button
+              id="send-button"
+              type="button"
+              class="absolute left-1/2 -translate-x-1/2 z-[100]"
+              style="
+                top: 480px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+              "
+            >
+              <div class="shadow-box group" style="width: 231px; height: 58px">
+                <div
+                  class="shadow-bg"
+                  style="left: 6px; top: 5.5px; width: 100%; height: 100%"
+                ></div>
+                <div
+                  class="shadow-content"
+                  style="background: #fe2828; border: 1.4px solid #000"
+                >
+                  <span style="font-weight: 800; font-size: 20px">SEND</span>
+                </div>
+              </div>
+            </button>
           </div>
-        </button>
+        </div>
 
         <div
           id="zoom-notice"

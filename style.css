@@ -7,27 +7,27 @@
 
 body {
   background: linear-gradient(110.23deg, #f4d839 46.51%, #ffef96 85.53%);
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
 .canvas-wrapper {
-  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(110.23deg, #f4d839 46.51%, #ffef96 85.53%);
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(110.23deg, #f4d839 46.51%, #ffef96 85.53%);
 }
 
 .canvas-content {
   width: 1280px;
-  height: 824px;
+  min-height: 824px;
   position: relative;
-  transform: scale(min(calc(80vw / 1280), calc(80vh / 824)));
-  transform-origin: center;
+  transform-origin: top center;
+  transform: scale(min(calc(100vw / 1300), 1));
+  margin: 0 auto;
 }
 
 @layer utilities {
