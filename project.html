@@ -35,7 +35,7 @@
         <div
           class="relative w-[1100px] mx-auto pt-[320px] pb-32 animate-paper-wipe"
         >
-          <div class="flex items-center justify-between mb-32 gap-10">
+          <div class="flex items-center justify-between mb-20 gap-10">
             <div class="w-1/2 pr-8">
               <p class="font-bold text-lg mb-2">27/06/2026</p>
               <h2 class="text-[55px] font-black leading-[1.1] mb-2 uppercase">
@@ -90,7 +90,7 @@
           </div>
 
           <div
-            class="flex items-center justify-between mb-32 flex-row-reverse gap-10"
+            class="flex items-center justify-between mb-20 flex-row-reverse gap-10"
           >
             <div class="w-1/2 pl-8">
               <p class="font-bold text-lg mb-2">10/06/2026</p>
@@ -116,8 +116,13 @@
                 gateway.
               </p>
               <p class="text-[19px] font-bold leading-[1.5] mb-8">
-                Contributor :<br />1. Firzakarin = leader & fullstack<br />2.
-                Aurora Kartika = backend & Api
+                Contributor :<br />1. Me = leader & fullstack<br />2.
+                <a
+                  href="https://github.com/yuriaja"
+                  class="text-blue-500 hover:underline"
+                  target="_blank"
+                  >Aurora Kartika</a
+                > = backend & Api
               </p>
               <div
                 class="shadow-box group cursor-pointer"
@@ -152,11 +157,84 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-between mb-32 gap-10">
+          <div class="flex items-center justify-between mb-20 gap-10">
             <div class="w-1/2 pr-8">
-              <p class="font-bold text-lg mb-2">07/01/2026</p>
+              <p class="font-bold text-lg mb-2">25/05/2026</p>
               <h2 class="text-[55px] font-black leading-[1.1] mb-2 uppercase">
-                MINESWEEPER<br />AI
+                MACHINE VISION<br />SEDERHANA
+              </h2>
+              <div class="inline-block relative mb-6">
+                <h3 class="text-2xl font-bold italic relative z-10">
+                  Final Year Project
+                </h3>
+                <span
+                  class="absolute left-0 bottom-1 w-full border-b-[2.8px] border-black transform -rotate-1"
+                ></span>
+                <span
+                  class="absolute left-1 bottom-[-2px] w-full border-b-[2.8px] border-black transform rotate-1"
+                ></span>
+              </div>
+              <p
+                class="text-[19px] font-medium leading-[1.5] mb-6 max-w-[420px]"
+              >
+                Real-time camera object detection Using improved canny edge detection and contour detection to detect object in real-time. The project is implemented using Python and OpenCV library. 
+                <br/> <a href="https://canva.link/r6cfm9a8yzyk975" class="text-blue-500 underline" target="_blank">View PPT</a>
+              </p>
+              <p class="text-[19px] font-bold leading-[1.5] mb-8 max-w-[420px]">
+                My Contribution : Report editor, researcher, research logic applicator
+              </p>
+              <div
+                class="shadow-box group cursor-pointer"
+                style="width: 190px; height: 46px"
+              >
+                <div
+                  class="shadow-bg"
+                  style="left: 5px; top: 5px; width: 100%; height: 100%"
+                ></div>
+                <div
+                  class="shadow-content bg-[#88E281] border-[2px] border-black"
+                >
+                  <a
+                    href="contact.html" 
+                    onclick="
+                      localStorage.setItem(
+                        'contact-form-data',
+                        JSON.stringify({
+                          name: '',
+                          email: '',
+                          topic: 'Comment',
+                          message: 'I want to know more about your Machine Vision project.',
+                        }),
+                      )
+                    "
+                    class="font-bold text-xl w-full h-full flex items-center justify-center text-black no-underline"
+                    >Contact for more</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="w-1/2 relative h-[450px] flex justify-end items-center">
+              <div
+                class="absolute w-[80%] h-[100%] bg-grid-pattern z-0 right- top-0"
+              ></div>
+              <img
+                src="images/pcd.jpeg"
+                class="relative z-10 h-[90%] object-contain transform rotate-1 hover:rotate-0 transition-transform duration-300 mr-2"
+                alt="Machine Vision"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-between mb-20 flex-row-reverse gap-10"
+          >
+            <div class="w-1/2 pl-8">
+              <p class="font-bold text-lg mb-2">07/01/2026</p>
+              <h2 class="text-[55px] font-black leading-[1.1] uppercase">
+               MINESWEEPER<br />AI<span
+                  class="text-[30px] font-black leading-[1.0] uppercase"
+                  ></span
+                >
               </h2>
               <div class="inline-block relative mb-6">
                 <h3 class="text-2xl font-bold italic relative z-10">
@@ -176,7 +254,7 @@
                 probability. It work as a pop up in front of real minesweeper
                 then the ai will do the magic.
               </p>
-              <p class="text-[19px] font-bold leading-[1.5] mb-8 max-w-[420px]">
+              <p class="text-[19px] font-bold leading-[1.5] mb-8">
                 My Contribution : Team leader, researcher, research logic
                 applicator, report editor
               </p>
@@ -199,28 +277,26 @@
                 </div>
               </div>
             </div>
-            <div class="w-1/2 relative h-[450px] flex justify-end items-center">
+
+            <div
+              class="w-1/2 relative h-[450px] flex justify-start items-center"
+            >
               <div
-                class="absolute w-[80%] h-[100%] bg-grid-pattern z-0 right- top-0"
+                class="absolute w-[80%] h-[100%] bg-grid-pattern z-0 left-0 top-0"
               ></div>
               <img
                 src="images/ai.jpg"
-                class="relative z-10 h-[90%] object-contain border-[3px] border-black bg-white transform rotate-1 hover:rotate-0 transition-transform duration-300 mr-2"
+                class="relative z-10 h-[95%] object-contain border-[3px] border-black transform rotate-2 hover:rotate-0 transition-transform duration-300 ml-6"
                 alt="Minesweeper AI"
               />
             </div>
           </div>
 
-          <div
-            class="flex items-center justify-between flex-row-reverse gap-10"
-          >
-            <div class="w-1/2 pl-8">
+          <div class="flex items-center justify-between gap-10">
+            <div class="w-1/2 pr-8">
               <p class="font-bold text-lg mb-2">10/06/2026</p>
-              <h2 class="text-[55px] font-black leading-[1.1] uppercase">
-                FORMAPAS<br /><span
-                  class="text-[30px] font-black leading-[1.0] uppercase"
-                  >(UNI STUDENT ORGANIZATION)</span
-                >
+              <h2 class="text-[55px] font-black leading-[1.1] mb-2 uppercase">
+                 FORMAPAS<br />(UNI STUDENT ORGANIZATION)
               </h2>
               <div class="inline-block relative mb-6">
                 <h3 class="text-2xl font-bold italic relative z-10">
@@ -239,8 +315,8 @@
                 Website for pasuruan student in university of Surabaya. 3D
                 Interactive, Story MBTI Games, and little e-commerce.
               </p>
-              <p class="text-[19px] font-bold leading-[1.5] mb-8">
-                My contribution: Design conceptor, fullstack, report editor
+              <p class="text-[19px] font-bold leading-[1.5] mb-8 max-w-[420px]">
+                  My contribution: Design conceptor, fullstack, report editor
               </p>
               <div
                 class="shadow-box group cursor-pointer"
@@ -261,19 +337,18 @@
                 </div>
               </div>
             </div>
-            <div
-              class="w-1/2 relative h-[450px] flex justify-start items-center"
-            >
+            <div class="w-1/2 relative h-[450px] flex justify-end items-center">
               <div
-                class="absolute w-[80%] h-[100%] bg-grid-pattern z-0 left-0 top-0"
+                class="absolute w-[80%] h-[100%] bg-grid-pattern z-0 right- top-0"
               ></div>
               <img
                 src="images/formapas.jpeg"
-                class="relative z-10 h-[95%] object-contain border-[3px] border-black transform rotate-2 hover:rotate-0 transition-transform duration-300 ml-6"
-                alt="Formapas"
+                class="relative z-10 h-[90%] object-contain border-[3px] border-black bg-white transform rotate-1 hover:rotate-0 transition-transform duration-300 mr-2"
+                alt="FORMAPAS Website"
               />
             </div>
           </div>
+          
         </div>
       </div>
     </div>

@@ -294,6 +294,52 @@
                   </div>
                 </div>
               </a>
+
+              <a
+                href="contact.html"
+                onclick="
+                      localStorage.setItem(
+                        'contact-form-data',
+                        JSON.stringify({
+                          name: '',
+                          email: '',
+                          topic: 'Comment',
+                          message: 'I want to know more about your Machine Vision project.',
+                        }),
+                      )
+                    "
+                target="_blank"
+                class="shadow-box group"
+                style="width: 380px; height: 150px; transform: rotate(1deg)"
+              >
+                <div
+                  class="shadow-bg"
+                  style="left: 8px; top: 8px; width: 100%; height: 100%"
+                ></div>
+                <div
+                  class="shadow-content flex p-3 gap-3"
+                  style="background: #e4aeff"
+                >
+                  <img
+                    src="images/pcd2.jpeg"
+                    alt="Portofolio Web"
+                    class="h-full w-2/5 object-cover border-2 border-black"
+                  />
+                  <div class="w-3/5 flex flex-col justify-center">
+                    <h4
+                      class="font-mono font-bold text-xl leading-tight mb-2 text-black"
+                    >
+                      Machine<br />Vision
+                    </h4>
+                    <p
+                      class="font-mono text-[10px] break-all leading-tight text-black hover:underline"
+                    >
+                      Contact me to know more about this project
+                    </p>
+                  </div>
+                </div>
+              </a>
+
             </div>
 
             <div
