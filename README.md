@@ -1,6 +1,7 @@
 # Portofolio
 
 Website portofolio pribadi yang menampilkan profil, pengalaman, proyek, dan halaman kontak. Desain website dibuat dengan tema neobrutalism.
+Access here : https://firzakrn.github.io/Porto/
 
 ## Bahasa yang digunakan
 
