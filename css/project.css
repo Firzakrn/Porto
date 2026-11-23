@@ -1,0 +1,419 @@
+/* ============ Tema Halaman Project ============ */
+body.page-project {
+  min-width: 1280px;
+  background: linear-gradient(115deg, #f4d839 45%, #ffef96 88%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+body.page-project #header-placeholder {
+  position: relative;
+  z-index: 999;
+}
+
+/* Wadah Tumpang Tindih: Mulai Tepat di Bawah Navbar, Sisakan 10px di Bawah */
+.receipt-stage {
+  position: relative;
+  width: 960px;
+  margin: 235px auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Gerak Melayang Halus: Kiri Miring dari Kiri ke Kanan (-4.5deg), Kanan Lurus (0deg) */
+@keyframes floatLeftReceipt {
+  0%,
+  100% {
+    transform: rotate(-4.5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-3.6deg) translateY(-6px);
+  }
+}
+
+@keyframes floatRightReceipt {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-5px);
+  }
+}
+
+/* Pembungkus Struk Kiri (Miring dari Kiri ke Kanan) */
+.receipt-shadow-left {
+  width: 410px;
+  flex-shrink: 0;
+  z-index: 10;
+  transform: rotate(-4.5deg);
+  transform-origin: bottom right;
+  filter: drop-shadow(10px 10px 0px #000);
+  cursor: pointer;
+  display: flex;
+  animation: floatLeftReceipt 4.2s ease-in-out infinite;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    z-index 0s;
+}
+
+/* Pembungkus Struk Kanan (Ramping Portrait & Tegak Lurus 0deg) */
+.receipt-shadow-right {
+  width: 515px;
+  flex-shrink: 0;
+  margin-left: -48px;
+  margin-top: 75px;
+  z-index: 20;
+  transform: rotate(0deg);
+  filter: drop-shadow(12px 12px 0px #000);
+  cursor: pointer;
+  display: flex;
+  animation: floatRightReceipt 4.6s ease-in-out infinite;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    z-index 0s;
+}
+
+/* Saat Diklik: Kiri Menimpa Kanan | Kanan Menimpa Navbar */
+.receipt-shadow-left.is-front {
+  z-index: 35 !important;
+  animation: none;
+  transform: rotate(-2deg) scale(1.015);
+}
+
+.receipt-shadow-right.is-front-navbar {
+  z-index: 1005 !important;
+  animation: none;
+  transform: rotate(0deg) scale(1.01);
+}
+
+/* ============ Potongan Kertas Struk Bergerigi Atas & Bawah ============ */
+.receipt-jagged-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fa8d74;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.16) 1.5px,
+    transparent 1.6px
+  );
+  background-size: 14px 14px;
+  border-left: 3.5px solid #000;
+  border-right: 3.5px solid #000;
+  padding: 24px 22px 26px;
+  clip-path: polygon(
+    0% 14px,
+    4% 0%,
+    8% 14px,
+    12% 0%,
+    16% 14px,
+    20% 0%,
+    24% 14px,
+    28% 0%,
+    32% 14px,
+    36% 0%,
+    40% 14px,
+    44% 0%,
+    48% 14px,
+    52% 0%,
+    56% 14px,
+    60% 0%,
+    64% 14px,
+    68% 0%,
+    72% 14px,
+    76% 0%,
+    80% 14px,
+    84% 0%,
+    88% 14px,
+    92% 0%,
+    96% 14px,
+    100% 0%,
+    100% calc(100% - 14px),
+    96% 100%,
+    92% calc(100% - 14px),
+    88% 100%,
+    84% calc(100% - 14px),
+    80% 100%,
+    76% calc(100% - 14px),
+    72% 100%,
+    68% calc(100% - 14px),
+    64% 100%,
+    60% calc(100% - 14px),
+    56% 100%,
+    52% calc(100% - 14px),
+    48% 100%,
+    44% calc(100% - 14px),
+    40% 100%,
+    36% calc(100% - 14px),
+    32% 100%,
+    28% calc(100% - 14px),
+    24% 100%,
+    20% calc(100% - 14px),
+    16% 100%,
+    12% calc(100% - 14px),
+    8% 100%,
+    4% calc(100% - 14px),
+    0% 100%
+  );
+}
+
+.receipt-jagged-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fffbe6;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.14) 1.4px,
+    transparent 1.5px
+  );
+  background-size: 13px 13px;
+  border-left: 3.5px solid #000;
+  border-right: 3.5px solid #000;
+  padding: 24px 26px 26px;
+  clip-path: polygon(
+    0% 14px,
+    3% 0%,
+    6% 14px,
+    9% 0%,
+    12% 14px,
+    15% 0%,
+    18% 14px,
+    21% 0%,
+    24% 14px,
+    27% 0%,
+    30% 14px,
+    33% 0%,
+    36% 14px,
+    39% 0%,
+    42% 14px,
+    45% 0%,
+    48% 14px,
+    51% 0%,
+    54% 14px,
+    57% 0%,
+    60% 14px,
+    63% 0%,
+    66% 14px,
+    69% 0%,
+    72% 14px,
+    75% 0%,
+    78% 14px,
+    81% 0%,
+    84% 14px,
+    87% 0%,
+    90% 14px,
+    93% 0%,
+    96% 14px,
+    100% 0%,
+    100% calc(100% - 14px),
+    96% 100%,
+    93% calc(100% - 14px),
+    90% 100%,
+    87% calc(100% - 14px),
+    84% 100%,
+    81% calc(100% - 14px),
+    78% 100%,
+    75% calc(100% - 14px),
+    72% 100%,
+    69% calc(100% - 14px),
+    66% 100%,
+    63% calc(100% - 14px),
+    60% 100%,
+    57% calc(100% - 14px),
+    54% 100%,
+    51% calc(100% - 14px),
+    48% 100%,
+    45% calc(100% - 14px),
+    42% 100%,
+    39% calc(100% - 14px),
+    36% 100%,
+    33% calc(100% - 14px),
+    30% 100%,
+    27% calc(100% - 14px),
+    24% 100%,
+    21% calc(100% - 14px),
+    18% 100%,
+    15% calc(100% - 14px),
+    12% 100%,
+    9% calc(100% - 14px),
+    6% 100%,
+    3% calc(100% - 14px),
+    0% 100%
+  );
+}
+
+/* ============ Animasi Slider Jatuh dari Atas ke Bawah (Di Wadah Dalam Agar Tidak Bentrok) ============ */
+@keyframes dropSlideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+  72% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-drop-slide {
+  animation: dropSlideFromTop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ============ 3 Prangko Dokumentasi Ringkas (Tanpa Hover, Klik untuk Lightbox) ============ */
+.doc-stamps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.doc-stamp-item {
+  position: relative;
+  height: 48px;
+  padding: 4px;
+  background-color: #fff;
+  background-image:
+    radial-gradient(circle at 4px 0, #fffbe6 2.5px, transparent 2.9px),
+    radial-gradient(circle at 4px 100%, #fffbe6 2.5px, transparent 2.9px),
+    radial-gradient(circle at 0 4px, #fffbe6 2.5px, transparent 2.9px),
+    radial-gradient(circle at 100% 4px, #fffbe6 2.5px, transparent 2.9px);
+  background-size:
+    8px 100%,
+    8px 100%,
+    100% 8px,
+    100% 8px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.22));
+}
+
+.doc-stamp-inner {
+  width: 100%;
+  height: 100%;
+  border: 1.8px solid #000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.doc-stamp-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doc-stamp-item.is-silhouette {
+  background-color: #e9e4d4;
+  cursor: default;
+  filter: none;
+}
+
+.doc-stamp-item.is-silhouette .doc-stamp-inner {
+  border: 1.8px dashed #555;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.04) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  color: #444;
+}
+
+#doc-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#doc-lightbox.open {
+  display: flex;
+}
+
+/* ============ Chrome-Style Tab Preview Tooltip pada Titik Indikator ============ */
+.dot-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chrome-tab-preview {
+  position: absolute;
+  right: 28px; /* Muncul di sebelah kiri titik indikator */
+  top: 50%;
+  transform: translateY(-50%) translateX(8px) scale(0.95);
+  width: 205px;
+  background: #fffbe6;
+  border: 2.5px solid #000;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0px #000;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 120;
+  transition:
+    opacity 0.18s ease,
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Saat titik indikator di-hover, munculkan Tab Preview ala Chrome */
+.dot-nav-item:hover .chrome-tab-preview {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0px) scale(1);
+}
+
+.chrome-tab-bar {
+  height: 20px;
+  background: #89c4d6;
+  border-bottom: 2px solid #000;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 800;
+  color: #000;
+}
+
+.chrome-tab-dots {
+  display: flex;
+  gap: 3px;
+}
+.chrome-tab-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #fff;
+  display: inline-block;
+}
+
+.chrome-tab-thumb {
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  border-bottom: 2px solid #000;
+  background: #fa8d74;
+}
+
+.chrome-tab-info {
+  padding: 6px 8px;
+  text-align: left;
+  font-family: "JetBrains Mono", monospace;
+}

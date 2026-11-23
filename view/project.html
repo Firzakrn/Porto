@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280" />
+    <title>Projects - Firzakarin</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@900&family=Lora:ital,wght@0,500;0,700;1,600&family=Montserrat:wght@900&family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+  </head>
+
+  <body class="page-project">
+    <!-- Full-Bleed Header Band -->
+    <div class="full-header-bg" aria-hidden="true">
+      <div class="hero-black-band"></div>
+      <div class="hero-orange-band"></div>
+    </div>
+
+    <!-- Dekorasi Sudut Layar -->
+    <div class="retro-bg-decor" aria-hidden="true">
+      <div class="checker-top-left"></div>
+      <div class="checker-top-right"></div>
+      <div class="checker-bottom-left"></div>
+      <div class="halftone halftone-head-left"></div>
+      <div class="halftone halftone-head-right"></div>
+      <img src="../images/accessories-2.png" class="acc-2-corner" alt="" />
+
+      <svg class="sticker-head-pc" viewBox="0 0 140 130" fill="none">
+        <g transform="rotate(-12 70 65)">
+          <rect x="22" y="92" width="96" height="18" rx="3" fill="#000" />
+          <rect
+            x="18"
+            y="88"
+            width="96"
+            height="18"
+            rx="3"
+            fill="#e8e4d8"
+            stroke="#000"
+            stroke-width="3"
+          />
+          <rect x="28" y="18" width="84" height="72" rx="6" fill="#000" />
+          <rect
+            x="24"
+            y="14"
+            width="84"
+            height="72"
+            rx="6"
+            fill="#f4f1e6"
+            stroke="#000"
+            stroke-width="3"
+          />
+          <rect
+            x="34"
+            y="24"
+            width="64"
+            height="48"
+            rx="4"
+            fill="#1e2b24"
+            stroke="#000"
+            stroke-width="3"
+          />
+          <rect x="48" y="36" width="5" height="8" fill="#5cff7a" />
+          <rect x="75" y="36" width="5" height="8" fill="#5cff7a" />
+          <path d="M50 54 H55 V59 H73 V54 H78 V62 H50 Z" fill="#5cff7a" />
+          <line
+            x1="72"
+            y1="96"
+            x2="102"
+            y2="96"
+            stroke="#000"
+            stroke-width="3"
+          />
+        </g>
+      </svg>
+
+      <svg class="sticker-head-cd" viewBox="0 0 130 130" fill="none">
+        <circle cx="68" cy="68" r="46" fill="#000" />
+        <circle
+          cx="64"
+          cy="64"
+          r="46"
+          fill="#d9e4ec"
+          stroke="#000"
+          stroke-width="3"
+        />
+        <path
+          d="M64 64 L30 32 A46 46 0 0 1 75 19 Z"
+          fill="#ff9ebb"
+          opacity="0.7"
+        />
+        <path
+          d="M64 64 L98 96 A46 46 0 0 1 52 109 Z"
+          fill="#88e5ff"
+          opacity="0.7"
+        />
+        <circle
+          cx="64"
+          cy="64"
+          r="16"
+          fill="#fff"
+          stroke="#000"
+          stroke-width="3"
+        />
+        <circle
+          cx="64"
+          cy="64"
+          r="7"
+          fill="#f6dd43"
+          stroke="#000"
+          stroke-width="3"
+        />
+        <ellipse
+          cx="64"
+          cy="64"
+          rx="58"
+          ry="18"
+          transform="rotate(-24 64 64)"
+          stroke="#000"
+          stroke-width="2.5"
+        />
+      </svg>
+    </div>
+
+    <div class="canvas-wrapper">
+      <div class="canvas-content relative">
+        <div id="header-placeholder"></div>
+
+        <!-- ==================== AREA STRUK TUMPANG TINDIH ==================== -->
+        <div class="receipt-stage">
+          <!-- STRUK KIRI -->
+          <div
+            id="card-left-wrap"
+            class="receipt-shadow-left"
+            title="Klik untuk menimpa struk kanan"
+          >
+            <div class="receipt-jagged-left">
+              <div>
+                <svg
+                  width="100%"
+                  height="12"
+                  viewBox="0 0 400 16"
+                  preserveAspectRatio="none"
+                >
+                  <polyline
+                    points="0,12 15,3 30,12 45,3 60,12 75,3 90,12 105,3 120,12 135,3 150,12 165,3 180,12 195,3 210,12 225,3 240,12 255,3 270,12 285,3 300,12 315,3 330,12 345,3 360,12 375,3 390,12 400,6"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="4.5"
+                  />
+                </svg>
+              </div>
+
+              <!-- Gambar Promosi Langsung Tanpa Bingkai Kotak -->
+              <div class="my-auto py-1 flex items-center justify-center">
+                <img
+                  id="proj-promo-img"
+                  src=""
+                  alt="Project Preview"
+                  class="w-full h-[380px] object-contain scale-[1.08]"
+                  style="filter: drop-shadow(6px 8px 0px rgba(0, 0, 0, 0.35))"
+                />
+              </div>
+
+              <div>
+                <div class="mb-2.5">
+                  <svg
+                    width="100%"
+                    height="12"
+                    viewBox="0 0 400 16"
+                    preserveAspectRatio="none"
+                  >
+                    <polyline
+                      points="0,12 15,3 30,12 45,3 60,12 75,3 90,12 105,3 120,12 135,3 150,12 165,3 180,12 195,3 210,12 225,3 240,12 255,3 270,12 285,3 300,12 315,3 330,12 345,3 360,12 375,3 390,12 400,6"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="4.5"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  class="flex items-center justify-between bg-[#ffcf33] border-2 border-black px-3 py-1.5 font-mono font-bold text-xs shadow-[3px_3px_0px_#000]"
+                >
+                  <span id="proj-code">PREVIEW #01</span>
+                  <span id="proj-stack">HTML • CSS • RETRO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STRUK KANAN -->
+          <div
+            id="card-right-wrap"
+            class="receipt-shadow-right"
+            title="Klik untuk mengangkat ke depan navbar"
+          >
+            <div class="receipt-jagged-right">
+              <div>
+                <!-- Garis Zig-Zag Atas -->
+                <div class="mb-3">
+                  <svg
+                    width="100%"
+                    height="12"
+                    viewBox="0 0 600 16"
+                    preserveAspectRatio="none"
+                  >
+                    <polyline
+                      points="0,12 18,3 36,12 54,3 72,12 90,3 108,12 126,3 144,12 162,3 180,12 198,3 216,12 234,3 252,12 270,3 288,12 306,3 324,12 342,3 360,12 378,3 396,12 414,3 432,12 450,3 468,12 486,3 504,12 522,3 540,12 558,3 576,12 600,6"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="4.5"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Baris Badge Atas -->
+                <div
+                  id="proj-badges"
+                  class="flex flex-wrap items-center gap-2 mb-2"
+                ></div>
+
+                <!-- Judul Project -->
+                <h1
+                  id="proj-title"
+                  style="
+                    font-family: &quot;Handjet&quot;, monospace;
+                    font-size: 46px;
+                    font-weight: 900;
+                    line-height: 0.95;
+                    color: #000;
+                  "
+                  class="mb-2"
+                ></h1>
+
+                <!-- Deskripsi Project + Link Tambahan -->
+                <p
+                  id="proj-desc"
+                  class="font-mono text-[13px] leading-snug text-[#111] mb-1.5"
+                ></p>
+                <div id="proj-extra-link" class="mb-2"></div>
+
+                <!-- Kotak Kontribusi + 3 Prangko Dokumentasi -->
+                <div
+                  class="bg-white border-[2.5px] border-black rounded-lg p-3 shadow-[4px_4px_0px_#000] mb-3"
+                >
+                  <div
+                    id="proj-contrib-header"
+                    class="font-mono font-black text-[11px] uppercase tracking-wider mb-1 flex items-center justify-between"
+                  ></div>
+                  <div
+                    id="proj-contributors"
+                    class="font-mono text-[11.5px] space-y-0.5 text-black"
+                  ></div>
+
+                  <!-- 3 Prangko Dokumentasi -->
+                  <div
+                    class="mt-2 pt-1.5 border-t-2 border-dashed border-black"
+                  >
+                    <div class="font-mono font-bold text-[10px] text-gray-700">
+                      Documentation (click the image)
+                    </div>
+                    <div id="proj-doc-stamps" class="doc-stamps-row"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bagian Bawah Struk Kanan -->
+              <div>
+                <div class="mb-3">
+                  <svg
+                    width="100%"
+                    height="12"
+                    viewBox="0 0 600 16"
+                    preserveAspectRatio="none"
+                  >
+                    <polyline
+                      points="0,12 18,3 36,12 54,3 72,12 90,3 108,12 126,3 144,12 162,3 180,12 198,3 216,12 234,3 252,12 270,3 288,12 306,3 324,12 342,3 360,12 378,3 396,12 414,3 432,12 450,3 468,12 486,3 504,12 522,3 540,12 558,3 576,12 600,6"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="4.5"
+                    />
+                  </svg>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <a
+                    id="proj-action-btn"
+                    href="#"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="font-mono font-black text-sm text-black bg-[#76dd77] border-[2.5px] border-black px-5 py-2 rounded-lg shadow-[4px_4px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-transform no-underline inline-flex items-center gap-2"
+                  >
+                    Github Repo ↗
+                  </a>
+
+                  <div
+                    class="bg-white border-2 border-black rounded px-3 py-1.5 shadow-[3px_3px_0px_#000] font-mono font-bold text-xs flex items-center gap-2"
+                  >
+                    <i class="fas fa-hourglass-half"></i>
+                    <span>Please wait...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigasi Bulat Atas-Bawah di Sisi Kanan -->
+          <div class="flex flex-col items-center gap-3 self-center ml-5 z-40">
+            <button
+              id="btn-prev"
+              type="button"
+              class="w-11 h-11 rounded-full bg-white border-[2.5px] border-black shadow-[3px_3px_0px_#000] flex items-center justify-center hover:bg-[#ffcf33] cursor-pointer"
+            >
+              <i class="fas fa-chevron-up"></i>
+            </button>
+            <div
+              id="proj-dots"
+              class="flex flex-col gap-2 py-2 px-1.5 bg-white border-[2.5px] border-black rounded-full shadow-[3px_3px_0px_#000]"
+            ></div>
+            <button
+              id="btn-next"
+              type="button"
+              class="w-11 h-11 rounded-full bg-[#76dd77] border-[2.5px] border-black shadow-[3px_3px_0px_#000] flex items-center justify-center hover:bg-[#ffcf33] cursor-pointer"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal untuk Foto Dokumentasi Prangko -->
+    <div id="doc-lightbox" onclick="this.classList.remove('open')">
+      <div
+        class="bg-[#fffbe6] border-[4px] border-black p-4 shadow-[12px_12px_0px_#000] max-w-[780px] relative"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          type="button"
+          onclick="
+            document.getElementById('doc-lightbox').classList.remove('open')
+          "
+          class="absolute -top-4 -right-4 w-9 h-9 bg-[#ff6b6b] border-2 border-black rounded-full font-mono font-black text-lg shadow-[3px_3px_0px_#000] cursor-pointer"
+        >
+          &times;
+        </button>
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Dokumentasi"
+          class="max-h-[75vh] border-2 border-black"
+        />
+        <p
+          id="lightbox-caption"
+          class="font-mono font-bold text-sm mt-2 text-center"
+        ></p>
+      </div>
+    </div>
+
+    <script>
+      const PROJECTS = [
+        {
+          code: "PREVIEW #08",
+          date: "WIP",
+          type: "Final Project",
+          isRealClient: false,
+          isFinalProject: true,
+          contributorCount: null,
+          title: "IOT ROOMIE (WIP)",
+          stack: "ESP32 • WOKWI • LARAVEL",
+          promoImg: "../images/roomie.png",
+          desc: "Building an IoT system with 2 sensors for real-life monitoring of empty classrooms.",
+          myContribution:
+            "Developing a Wokwi design, building a Laravel website, testing the connection between Wokwi and the web, and assisting in the design of an actual IoT component circuit.",
+          docs: ["../images/ro1.jpg", "../images/ro2.png", "../images/ro3.jpg"],
+          btnLabel: "Contact for more ↗",
+          btnUrl: "contact.html",
+          isContactTrigger: true,
+          contactMsg: "I want to know more about your IoT Roomie project.",
+        },
+        {
+          code: "PREVIEW #07",
+          date: "10/11/2026",
+          type: "Group Project",
+          isRealClient: true,
+          isFinalProject: false,
+          contributorCount: 3,
+          title: "DESARA (PELAYANAN ADMINISTRASI DESA)",
+          stack: "LARAVEL • HOSTING • DEPLOY",
+          promoImg: "../images/des1.png",
+          desc: "A village administrative service website where residents can apply for various administrative documents online.",
+          contributors: [
+            { name: "1. Client", role: "frontend" },
+            {
+              name: "2. Aurora Kartika",
+              url: "https://github.com/yuriaja",
+              role: "fullstack",
+            },
+            {
+              name: "3. Me",
+              role: "purchasing hosting & domain, deployment and maintenance",
+            },
+          ],
+          docs: ["../images/des1.png", "../images/des2.png", null],
+          btnLabel: "Visit Live Web ↗",
+          btnUrl: "https://desara.web.id",
+        },
+        {
+          code: "PREVIEW #06",
+          date: "16/10/2026",
+          type: "Web Development Project",
+          isRealClient: true,
+          isFinalProject: false,
+          contributorCount: 3,
+          title: "MATHLEAF — LMS MATEMATIKA",
+          stack: "LARAVEL • TAILWIND • MYSQL",
+          promoImg: "../images/math2.jpg",
+          desc: "A web-based Mathematics Learning Management System (LMS) platform featuring dashboards for teachers and students, automated class codes, teaching materials, timed quizzes, auto-grading, and discussion forums.",
+          contributors: [
+            {
+              name: "1. Aurora Kartika",
+              url: "https://github.com/yuriaja",
+              role: "project leader",
+            },
+            {
+              name: "2. Hkemm",
+              url: "https://github.com/Hkemm",
+              role: "backend",
+            },
+            {
+              name: "3. Me",
+              role: "mainly frontend, testing, deploy & bug fixing",
+            },
+          ],
+          docs: [
+            "../images/math1.png",
+            "../images/math2.jpg",
+            "../images/math3..jpg",
+          ],
+          btnLabel: "Visit Live Web ↗",
+          btnUrl: "https://mathleaf.web.id",
+        },
+        {
+          code: "PREVIEW #01",
+          date: "27/06/2026",
+          type: "Web Development Project",
+          isRealClient: false,
+          isFinalProject: false,
+          contributorCount: 1,
+          title: "PORTOFOLIO WEB",
+          stack: "HTML • CSS • RETRO",
+          promoImg: "../images/portoo.jpg",
+          desc: "Current website that show of my past experience and determination. Please consider to contact me!!",
+          myContribution: "UI/UX Design, Custom SVG Stickers & Full Frontend",
+          docs: ["../images/portoo.jpg", null, null],
+          btnLabel: "Github Repo ↗",
+          btnUrl: "https://github.com/Firzakrn/Portofolio.git",
+        },
+        {
+          code: "PREVIEW #02",
+          date: "10/06/2026",
+          type: "Web Development Project",
+          isRealClient: true,
+          isFinalProject: false,
+          contributorCount: 2,
+          title: "MASJID AGUNG GRESIK WEB",
+          stack: "WEB • PAYMENT GATEWAY",
+          promoImg: "../images/masjid.png",
+          desc: "Website about education and event place rental in Gresik great mosque. Interactive website and build in sandbox payment gateway.",
+          contributors: [
+            { name: "1. Me", role: "leader & fullstack" },
+            {
+              name: "2. Aurora Kartika",
+              url: "https://github.com/yuriaja",
+              role: "backend & Api",
+            },
+          ],
+          docs: [
+            "../images/masjid.png",
+            "../images/MAG2.png",
+            "../images/MAG3.png",
+          ],
+          btnLabel: "Github Repo ↗",
+          btnUrl: "https://github.com/Firzakrn/MasjidAgung.git",
+        },
+        {
+          code: "PREVIEW #03",
+          date: "25/05/2026",
+          type: "Final Year Project",
+          isRealClient: false,
+          isFinalProject: true,
+          contributorCount: null,
+          title: "MACHINE VISION SEDERHANA",
+          stack: "PYTHON • OPENCV",
+          promoImg: "../images/pcd.jpeg",
+          desc: "Real-time camera object detection Using improved canny edge detection and contour detection to detect object in real-time. The project is implemented using Python and OpenCV library.",
+          extraLinkLabel: "View PPT ↗",
+          extraLinkUrl: "#",
+          myContribution:
+            "Report editor, researcher, research logic applicator",
+          docs: ["../images/pcd.jpeg", null, null],
+          btnLabel: "Contact for more ↗",
+          btnUrl: "contact.html",
+          isContactTrigger: true,
+          contactMsg: "I want to know more about your Machine Vision project.",
+        },
+        {
+          code: "PREVIEW #04",
+          date: "07/01/2026",
+          type: "Final Year Project",
+          isRealClient: false,
+          isFinalProject: true,
+          contributorCount: null,
+          title: "MINESWEEPER AI",
+          stack: "PYTHON • BAYESIAN AI",
+          promoImg: "../images/ai.jpg",
+          desc: "A real-time automated AI solver for Minesweeper using Bayesian probability. It work as a pop up in front of real minesweeper then the ai will do the magic.",
+          myContribution:
+            "Team leader, researcher, research logic applicator, report editor",
+          docs: ["../images/ai.jpg", "../images/ai2.jpg", "../images/ai3.jpg"],
+          btnLabel: "Github Repo ↗",
+          btnUrl: "https://github.com/Firzakrn/Minesweeper-AI.git",
+        },
+        {
+          code: "PREVIEW #05",
+          date: "10/06/2026",
+          type: "Final Year Project",
+          isRealClient: false,
+          isFinalProject: true,
+          contributorCount: null,
+          title: "FORMAPAS (UNI STUDENT ORGANIZATION)",
+          stack: "3D INTERACTIVE • WEB",
+          promoImg: "../images/formapas.jpeg",
+          desc: "Website for pasuruan student in university of Surabaya. 3D Interactive, Story MBTI Games, and little e-commerce.",
+          myContribution: "Design conceptor, fullstack, report editor",
+          docs: [
+            "../images/formapas.jpeg",
+            "../images/for2.jpg",
+            "../images/for3.jpg",
+          ],
+          btnLabel: "Github Repo ↗",
+          btnUrl: "https://github.com/Firzakrn/FormapasWeb.git",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      const leftWrap = document.getElementById("card-left-wrap");
+      const rightWrap = document.getElementById("card-right-wrap");
+
+      leftWrap.addEventListener("click", (e) => {
+        e.stopPropagation();
+        rightWrap.classList.remove("is-front-navbar");
+        leftWrap.classList.toggle("is-front");
+      });
+
+      rightWrap.addEventListener("click", (e) => {
+        e.stopPropagation();
+        leftWrap.classList.remove("is-front");
+        rightWrap.classList.toggle("is-front-navbar");
+      });
+
+      document.addEventListener("click", () => {
+        leftWrap.classList.remove("is-front");
+        rightWrap.classList.remove("is-front-navbar");
+      });
+
+      function openLightbox(src, caption) {
+        document.getElementById("lightbox-img").src = src;
+        document.getElementById("lightbox-caption").textContent = caption;
+        document.getElementById("doc-lightbox").classList.add("open");
+      }
+
+      // Animasi slider jatuh dari atas ke bawah pada kedua struk
+      function triggerDropSlide() {
+        leftWrap.classList.remove("anim-drop-slide");
+        rightWrap.classList.remove("anim-drop-slide");
+        void leftWrap.offsetWidth;
+        void rightWrap.offsetWidth;
+        leftWrap.classList.add("anim-drop-slide");
+        rightWrap.classList.add("anim-drop-slide");
+      }
+
+      function renderProject(idx) {
+        const p = PROJECTS[idx];
+        triggerDropSlide();
+
+        document.getElementById("proj-code").textContent = p.code;
+        document.getElementById("proj-stack").textContent = p.stack;
+        document.getElementById("proj-promo-img").src = p.promoImg;
+        document.getElementById("proj-title").textContent = p.title;
+        document.getElementById("proj-desc").textContent = p.desc;
+
+        const extraLinkEl = document.getElementById("proj-extra-link");
+        if (p.extraLinkLabel) {
+          extraLinkEl.innerHTML = `<a href="${p.extraLinkUrl}" target="_blank" onclick="event.stopPropagation()" class="font-mono font-black text-xs underline text-black hover:text-[#d9483b]">${p.extraLinkLabel}</a>`;
+        } else {
+          extraLinkEl.innerHTML = "";
+        }
+
+        const badgesEl = document.getElementById("proj-badges");
+        let badgesHtml = `
+          <span class="font-mono font-bold text-xs px-2.5 py-0.5 bg-[#f6dd43] border-2 border-black rounded-full">${p.date}</span>
+          <span class="font-mono font-bold text-xs px-2.5 py-0.5 bg-[#89c4d6] border-2 border-black rounded-full">${p.type}</span>
+        `;
+        if (p.isRealClient) {
+          badgesHtml += `
+            <span class="font-mono font-black text-xs px-2.5 py-0.5 bg-[#ff7657] text-black border-2 border-black rounded-full shadow-[2px_2px_0px_#000]">
+              ★ REAL CLIENT
+            </span>
+          `;
+        }
+        if (p.contributorCount) {
+          badgesHtml += `
+            <span class="font-mono font-bold text-xs px-2.5 py-0.5 bg-white border-2 border-black rounded-full">
+              <i class="fas fa-users mr-1"></i>${p.contributorCount} Contributor${p.contributorCount > 1 ? "s" : ""}
+            </span>
+          `;
+        }
+        badgesEl.innerHTML = badgesHtml;
+
+        const headerEl = document.getElementById("proj-contrib-header");
+        const bodyEl = document.getElementById("proj-contributors");
+
+        if (p.isFinalProject || !p.contributors) {
+          headerEl.innerHTML = `<span>My Contribution</span>`;
+          bodyEl.innerHTML = `<p class="leading-snug">${p.myContribution}</p>`;
+        } else {
+          headerEl.innerHTML = `
+            <span>Contributor</span>
+            <span class="px-2 py-0.5 bg-[#bce5ed] border border-black rounded">${p.contributors.length} Orang</span>
+          `;
+          bodyEl.innerHTML = p.contributors
+            .map((c) => {
+              const nameTag = c.url
+                ? `<a href="${c.url}" target="_blank" onclick="event.stopPropagation()" class="underline font-black text-[#1d4ed8] hover:text-black" title="Buka GitHub ${c.name}">${c.name}</a>`
+                : `<strong class="font-black">${c.name}</strong>`;
+              return `<div>${nameTag} = <span>${c.role}</span></div>`;
+            })
+            .join("");
+        }
+
+        // 3 Prangko Dokumentasi (Klik untuk Lightbox, Tanpa Hover)
+        document.getElementById("proj-doc-stamps").innerHTML = p.docs
+          .slice(0, 3)
+          .map((imgSrc, i) => {
+            if (imgSrc) {
+              return `
+                <div class="doc-stamp-item" onclick="event.stopPropagation(); openLightbox('${imgSrc}', '${p.title} — Dokumentasi #0${i + 1}')">
+                  <div class="doc-stamp-inner">
+                    <img src="${imgSrc}" alt="Doc ${i + 1}" />
+                    <span class="absolute bottom-0.5 right-1 bg-[#ffcf33] border border-black px-1 font-mono font-black text-[8px]">
+                      DOC 0${i + 1}
+                    </span>
+                  </div>
+                </div>
+              `;
+            }
+            return `
+              <div class="doc-stamp-item is-silhouette" onclick="event.stopPropagation()" title="Belum ada foto dokumentasi">
+                <div class="doc-stamp-inner">
+                  <svg width="16" height="14" viewBox="0 0 24 20" fill="none" stroke="#666" stroke-width="1.8">
+                    <rect x="2" y="2" width="20" height="16" rx="2" stroke-dasharray="3 2" />
+                    <circle cx="8" cy="7" r="2" />
+                    <path d="M3 16 L9 10 L13 14 L16 11 L21 16" />
+                  </svg>
+                  <span class="font-mono font-bold text-[8px]">STAMP #0${i + 1}</span>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        const btn = document.getElementById("proj-action-btn");
+        btn.textContent = p.btnLabel;
+        btn.href = p.btnUrl;
+        if (p.isContactTrigger) {
+          btn.removeAttribute("target");
+          btn.onclick = (e) => {
+            e.stopPropagation();
+            localStorage.setItem(
+              "contact-form-data",
+              JSON.stringify({
+                name: "",
+                email: "",
+                topic: "Comment",
+                message: p.contactMsg,
+              }),
+            );
+          };
+        } else {
+          btn.setAttribute("target", "_blank");
+          btn.onclick = (e) => e.stopPropagation();
+        }
+
+        document.getElementById("proj-dots").innerHTML = PROJECTS.map(
+          (item, i) => `
+            <div class="dot-nav-item">
+              <button
+                type="button"
+                onclick="event.stopPropagation(); goToProject(${i})"
+                class="w-3.5 h-3.5 rounded-full border-2 border-black cursor-pointer transition-transform hover:scale-125 ${
+                  i === idx ? "bg-[#ff6b6b] scale-110" : "bg-white"
+                }"
+              ></button>
+
+              <!-- Chrome Tab Preview Card saat Hover -->
+              <div class="chrome-tab-preview">
+                <div class="chrome-tab-bar">
+                  <span class="chrome-tab-dots"><i></i><i></i><i></i></span>
+                  <span>0${i + 1} • ${item.date}</span>
+                </div>
+                <img src="${item.promoImg}" alt="${item.title}" class="chrome-tab-thumb" />
+                <div class="chrome-tab-info">
+                  <div class="font-black text-[11px] leading-tight text-black truncate">
+                    ${item.title}
+                  </div>
+                  <div class="text-[9.5px] text-gray-700 mt-0.5 truncate">
+                    ${item.type}${item.isRealClient ? " • ★ Real Client" : ""}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `,
+        ).join("");
+      }
+
+      function goToProject(i) {
+        currentIndex = i;
+        renderProject(currentIndex);
+      }
+
+      document.getElementById("btn-prev").addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + PROJECTS.length) % PROJECTS.length;
+        renderProject(currentIndex);
+      });
+
+      document.getElementById("btn-next").addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % PROJECTS.length;
+        renderProject(currentIndex);
+      });
+
+      renderProject(0);
+
+      fetch("head.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const box = document.getElementById("header-placeholder");
+          box.innerHTML = data;
+          box.querySelectorAll("script").forEach((s) => eval(s.innerText));
+        });
+
+      function triggerDropSlide() {
+        const leftJagged = document.querySelector(".receipt-jagged-left");
+        const rightJagged = document.querySelector(".receipt-jagged-right");
+        leftJagged.classList.remove("anim-drop-slide");
+        rightJagged.classList.remove("anim-drop-slide");
+        void leftJagged.offsetWidth;
+        void rightJagged.offsetWidth;
+        leftJagged.classList.add("anim-drop-slide");
+        rightJagged.classList.add("anim-drop-slide");
+      }
+    </script>
+  </body>
+</html>

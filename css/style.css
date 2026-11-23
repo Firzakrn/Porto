@@ -1,0 +1,811 @@
+/* Reset & Base Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6dd43;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+  background-size: 36px 36px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* ============ Full-Bleed Header Band ============ */
+.full-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-orange-band {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 166px;
+  background: #ff7657;
+  border-bottom: 2.5px solid #000;
+  z-index: 2;
+}
+
+.hero-black-band {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 100%;
+  height: 166px;
+  background: #000;
+  z-index: 1;
+}
+
+@media (max-width: 1509px) {
+  .hero-orange-band,
+  .hero-black-band {
+    height: calc(166px * (100vw / 1510));
+  }
+}
+
+/* ============ Dekorasi Sudut Layar (Fixed ke Ujung Monitor) ============ */
+.retro-bg-decor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.checker-top-left,
+.checker-bottom-left,
+.checker-top-right {
+  position: fixed;
+  width: 112px;
+  height: 54px;
+  background-color: #fff;
+  background-image: conic-gradient(
+    #000 90deg,
+    transparent 90deg 180deg,
+    #000 180deg 270deg,
+    transparent 270deg
+  );
+  background-size: 28px 28px;
+}
+.checker-top-left {
+  left: 0;
+  top: 0;
+}
+.checker-bottom-left {
+  left: 0;
+  bottom: 0;
+}
+.checker-top-right {
+  right: 0;
+  top: 0;
+}
+
+.acc-2-corner {
+  position: fixed;
+  right: 0;
+  top: -12px;
+  width: 245px;
+  z-index: 6;
+}
+
+.sticker-head-pc {
+  position: fixed;
+  left: 38px;
+  top: 10px;
+  width: 145px;
+  z-index: 7;
+}
+
+.sticker-head-cd {
+  position: fixed;
+  right: 16px;
+  top: 12px;
+  width: 138px;
+  z-index: 7;
+}
+
+.sticker-floppy-corner {
+  position: fixed;
+  left: 24px;
+  bottom: 45px;
+  width: 115px;
+  z-index: 6;
+}
+
+.sticker-gameboy-corner {
+  position: fixed;
+  right: 14px;
+  bottom: 24px;
+  width: 120px;
+  z-index: 6;
+}
+
+/* Window LOADING... di Sisi Kanan */
+.sticker-loading-corner {
+  position: fixed;
+  right: 12px;
+  top: 195px;
+  width: 155px;
+  background: #fffbe6;
+  border: 2.5px solid #000;
+  border-radius: 6px;
+  box-shadow: 5px 5px 0px #000;
+  overflow: hidden;
+  z-index: 6;
+}
+.loading-bar-top {
+  height: 18px;
+  background: #88cdea;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  padding: 0 6px;
+}
+.loading-bar-top span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  background: #fff;
+}
+.loading-body {
+  padding: 8px 10px 10px;
+}
+.loading-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.loading-track {
+  width: 100%;
+  height: 14px;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 2px;
+}
+.loading-fill {
+  height: 100%;
+  width: 65%;
+  background: repeating-linear-gradient(
+    to right,
+    #76dd77 0px,
+    #76dd77 8px,
+    #000 8px,
+    #000 10px
+  );
+  animation: loadingPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes loadingPulse {
+  0% {
+    width: 35%;
+  }
+  100% {
+    width: 92%;
+  }
+}
+
+/* ============ Bintik-Bintik Halftone Dots ============ */
+.halftone {
+  pointer-events: none;
+  background-image: radial-gradient(#000 2.4px, transparent 2.6px);
+  background-size: 12px 12px;
+  opacity: 0.8;
+}
+
+.halftone-head-left {
+  position: fixed;
+  left: 20px;
+  top: 118px;
+  width: 200px;
+  height: 130px;
+  transform: rotate(-18deg);
+  mask-image: radial-gradient(circle, #000 38%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle, #000 38%, transparent 72%);
+}
+
+.halftone-head-right {
+  position: fixed;
+  right: 130px;
+  top: 25px;
+  width: 220px;
+  height: 140px;
+  transform: rotate(22deg);
+  mask-image: radial-gradient(circle, #000 38%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle, #000 38%, transparent 72%);
+}
+
+/* Bintik bawah diperbesar */
+.halftone-bottom {
+  position: absolute;
+  width: 340px;
+  height: 175px;
+  left: 315px;
+  top: 645px;
+  background-image: radial-gradient(#000 3.2px, transparent 3.4px);
+  background-size: 15px 15px;
+  opacity: 0.85;
+  transform: rotate(14deg);
+  z-index: 1;
+  mask-image: radial-gradient(circle, #000 42%, transparent 74%);
+  -webkit-mask-image: radial-gradient(circle, #000 42%, transparent 74%);
+}
+
+/* ============ Wadah Utama (Chrome Zoom 100% = Tampilan 90%) ============ */
+.canvas-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.canvas-content {
+  width: 1360px;
+  min-height: 820px;
+  position: relative;
+  margin: 0 auto;
+  zoom: calc(100vw / 1510);
+}
+
+@media (min-width: 1510px) {
+  .canvas-content {
+    zoom: 1;
+  }
+}
+
+/* ============ Stiker Dalam Kanvas ============ */
+.sticker {
+  position: absolute;
+  pointer-events: none;
+}
+.sticker-cursor-top {
+  left: 930px;
+  top: 85px;
+  width: 58px;
+  z-index: 9;
+}
+.sticker-crown {
+  left: 675px;
+  top: 268px;
+  width: 64px;
+  z-index: 6;
+}
+.sticker-cursor-btn {
+  position: absolute;
+  right: -12px;
+  bottom: -18px;
+  width: 44px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ============ Typography Retro ============ */
+.font-handjet {
+  font-family: "Handjet", monospace;
+  font-weight: 900;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+.font-lora {
+  font-family: "Lora", Georgia, serif;
+}
+.font-space {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+/* ============ Retro Card ("I'm Firzakarin") ============ */
+.retro-card {
+  position: absolute;
+  background: #fffbe6;
+  border: 2.5px solid #000;
+  border-radius: 10px;
+  box-shadow: 7px 7px 0px #000;
+  z-index: 3;
+}
+
+.retro-title {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 700;
+  font-size: 31px;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+
+.double-underline {
+  position: absolute;
+  width: 145px;
+  border-top: 2.2px solid #000;
+  transform: rotate(-4deg);
+}
+.double-underline.line-1 {
+  left: 98px;
+  top: 56px;
+}
+.double-underline.line-2 {
+  left: 108px;
+  top: 61px;
+}
+
+.retro-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 12px;
+  background: #fff;
+  border: 2px solid #000;
+  font-family: "Lora", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
+}
+
+.retro-body-text {
+  margin-top: 16px;
+  font-family: "Lora", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.48;
+  color: #111;
+}
+
+/* ============ Retro OS Window ("PLACE YOUR ORDER") ============ */
+.retro-window {
+  position: absolute;
+  background: #fffbe6;
+  border: 2.5px solid #000;
+  border-radius: 10px;
+  box-shadow: 7px 7px 0px #000;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.retro-window-bar {
+  height: 28px;
+  background: #f5dc42;
+  border-bottom: 2.5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.window-dots .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1.8px solid #000;
+  display: inline-block;
+}
+.dot-red {
+  background: #ff6b6b;
+}
+.dot-orange {
+  background: #ff9f43;
+}
+.dot-yellow {
+  background: #ffe66d;
+}
+
+.retro-window-body {
+  padding: 18px 22px 24px;
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-title-retro {
+  font-family: "Handjet", monospace;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 31px;
+  color: #fff;
+  display: inline-block;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0px -2px 0 #000,
+    0px 2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    4px 4px 0 #000;
+}
+
+/* ============ Retro Buttons ============ */
+.retro-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 46px;
+  border: 2.5px solid #000;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.retro-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.retro-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #000;
+}
+
+.btn-blue {
+  background: #7cc6e8;
+}
+.btn-green {
+  background: #76dd77;
+}
+
+/* ============ Hiasan & Assets ============ */
+.hiasan {
+  position: absolute;
+  z-index: 2;
+}
+.acc-1 {
+  left: 265px;
+  top: 8px;
+  width: 155px;
+}
+.acc-3 {
+  left: 135px;
+  top: 215px;
+  width: 82px;
+}
+.acc-4 {
+  left: 150px;
+  top: 470px;
+  width: 46px;
+}
+.acc-5 {
+  left: 135px;
+  top: 535px;
+  width: 82px;
+}
+.eyes {
+  left: 985px;
+  top: 215px;
+  width: 105px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.eyes:active {
+  transform: scaleY(0.1);
+}
+
+/* ============ Shadow Box Component ============ */
+.shadow-box {
+  position: relative;
+  display: inline-block;
+}
+.shadow-bg {
+  position: absolute;
+  background: #000;
+}
+.shadow-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============ Pull Cord Navbar Retro ============ */
+.pull-cord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.cord-line {
+  width: 3px;
+  height: 28px;
+  background: #ff7657;
+  transition: height 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pull-cord:hover .cord-line {
+  height: 55px;
+}
+
+/* Saat Aktif: Tali memanjang ke bawah sama persis seperti INTRODUCTION */
+.pull-cord.active .cord-line {
+  height: 115px !important;
+}
+.pull-cord.active:hover .cord-line {
+  height: 128px !important;
+}
+
+/* Tampilan Dasar Semua Pill Navbar (Saat Tidak Aktif) */
+.intro-pill,
+.nav-pill-white {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background: #fff;
+  border: 2.5px solid #000;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0px #000;
+  color: #000;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.nav-pill-white:hover,
+.intro-pill:hover {
+  background: #fffbe6;
+}
+
+/* Sembunyikan Selotip & 3 Titik Bulat kalau sedang TIDAK Aktif */
+.pull-cord:not(.active) .retro-tape,
+.pull-cord:not(.active) .pill-dots {
+  display: none;
+}
+
+.pull-cord:not(.active) .intro-pill {
+  width: 195px;
+  justify-content: center;
+}
+
+/* ============ STYLE ACTIVE (SAMA PERSIS KAYAK INTRODUCTION, CUMA BEDA WARNA) ============ */
+.pull-cord.active .intro-pill,
+.pull-cord.active .nav-pill-white {
+  width: 285px;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+/* Warna Active Masing-Masing Halaman (Bukan Pink Melulu) */
+.pull-cord.active.is-intro .intro-pill,
+.pull-cord.active.is-intro .nav-pill-white {
+  background: #ffcf33 !important; /* Kuning Retro untuk Introduction */
+}
+
+.pull-cord.active.is-proj .intro-pill,
+.pull-cord.active.is-proj .nav-pill-white {
+  background: #7cc6e8 !important; /* Biru Langit untuk Project */
+}
+
+.pull-cord.active.is-cont .intro-pill,
+.pull-cord.active.is-cont .nav-pill-white {
+  background: #76dd77 !important; /* Hijau Mint untuk Contact */
+}
+
+.retro-tape {
+  position: absolute;
+  left: -10px;
+  top: -12px;
+  width: 38px;
+  height: 16px;
+  background: rgba(255, 235, 120, 0.92);
+  border: 1.5px solid #000;
+  transform: rotate(-22deg);
+}
+
+.pill-dots {
+  display: flex;
+  gap: 5px;
+}
+.pill-dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.8px solid #000;
+  background: rgba(255, 255, 255, 0.75);
+  display: inline-block;
+}
+
+/* ============ Porto paper Component ============ */
+.main-box {
+  position: absolute;
+  left: 50%;
+  top: 320px;
+  width: min(1120px, 92vw);
+  transform: translateX(-50%);
+  height: auto;
+  min-height: 1000px;
+  background: #fff;
+  border: 2.5px solid #000;
+  padding: 30px 36px 70px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.inner-box {
+  width: min(620px, 100%);
+  border: 2.5px solid #000;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-card-wrapper {
+  position: absolute;
+  right: 40px;
+  top: 340px;
+  width: 320px;
+  height: 430px;
+  z-index: 5;
+}
+
+.ip-badge-wrapper {
+  position: absolute;
+  left: 800px;
+  top: 620px;
+  width: 280px;
+  height: 75px;
+  z-index: 6;
+  transform: rotate(-4deg);
+}
+
+/* =========== Project ============ */
+.bg-grid-pattern {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, #000 2px, transparent 2px),
+    linear-gradient(to bottom, #000 2px, transparent 2px);
+}
+
+/* =========== Contact ============ */
+.envelope-container {
+  min-width: 320px;
+  width: 100%;
+}
+
+.envelope-skin {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.form-content {
+  background: white;
+  border: 4px solid #000000;
+  box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+  position: relative;
+  z-index: 10;
+  margin: 20px;
+  min-height: 600px;
+}
+
+input,
+textarea,
+select {
+  border: 2px solid #000000 !important;
+  padding: 10px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+button:hover {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 768px) {
+  .form-content {
+    padding: 20px;
+  }
+  input {
+    width: 100% !important;
+  }
+}
+
+/* ============ Styling/* ============ Styling Khusus Halaman Contact ============ */
+body.page-contact {
+  min-width: 1280px;
+  background: linear-gradient(115deg, #f4d839 45%, #ffef96 88%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body.page-contact .full-header-bg {
+  min-width: 1280px;
+}
+
+body.page-contact .canvas-wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+body.page-contact #header-placeholder {
+  position: relative;
+  z-index: 999 !important;
+}
+
+@keyframes contactStickerFloat {
+  0%,
+  100% {
+    transform: rotate(-6deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-1deg) translateY(-6px);
+  }
+}
+
+.contact-sticker-float {
+  animation: contactStickerFloat 3.6s ease-in-out infinite;
+}
+
+.contact-letter-paper {
+  background-color: #fffbe6 !important;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.14) 1.4px,
+    transparent 1.5px
+  );
+  background-size: 13px 13px;
+}
+
+.contact-airmail-stamp {
+  width: 112px;
+  height: 124px;
+  padding: 8px;
+  background-color: #fff;
+  background-image:
+    radial-gradient(circle at 6px 0, #fffbe6 3.5px, transparent 4px),
+    radial-gradient(circle at 6px 100%, #fffbe6 3.5px, transparent 4px),
+    radial-gradient(circle at 0 6px, #fffbe6 3.5px, transparent 4px),
+    radial-gradient(circle at 100% 6px, #fffbe6 3.5px, transparent 4px);
+  background-size:
+    12px 100%,
+    12px 100%,
+    100% 12px,
+    100% 12px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  transform: rotate(6deg);
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.25));
+}

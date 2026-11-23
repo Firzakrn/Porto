@@ -1,0 +1,327 @@
+<header
+  style="
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 1360px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  "
+>
+  <img src="/images/accessories-1.png" class="hiasan acc-1" alt="" />
+  <img src="/images/eyes.png" class="hiasan eyes" alt="Eyes" />
+
+  <div style="display: flex; align-items: flex-end; gap: 18px">
+    <div style="position: relative; display: inline-block">
+      <span
+        class="font-handjet"
+        style="
+          font-size: 86px;
+          line-height: 76px;
+          color: #000;
+          -webkit-text-stroke: 14px #000;
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          z-index: 1;
+        "
+        >WELCOME</span
+      >
+      <span
+        class="font-handjet"
+        style="
+          font-size: 86px;
+          line-height: 76px;
+          color: #fff;
+          position: relative;
+          z-index: 2;
+        "
+        >WELCOME</span
+      >
+    </div>
+
+    <div style="position: relative; display: inline-block; margin-bottom: 2px">
+      <span
+        class="font-handjet"
+        style="
+          font-size: 64px;
+          line-height: 62px;
+          color: #000;
+          -webkit-text-stroke: 12px #000;
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          z-index: 1;
+        "
+        >TO</span
+      >
+      <span
+        class="font-handjet"
+        style="
+          font-size: 64px;
+          line-height: 62px;
+          color: #fff;
+          position: relative;
+          z-index: 2;
+        "
+        >TO</span
+      >
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 14px; margin-top: 4px">
+    <div
+      class="shadow-box"
+      style="width: 124px; height: 58px; transform: rotate(-3deg)"
+    >
+      <div
+        class="shadow-bg"
+        style="left: 5px; top: 5px; width: 100%; height: 100%"
+      ></div>
+      <div class="shadow-content" style="background: #fff; border-width: 2.5px">
+        <span
+          class="font-lora"
+          style="
+            font-weight: 700;
+            font-size: 54px;
+            letter-spacing: -0.05em;
+            color: #fe2828;
+            -webkit-text-stroke: 1.5px #000;
+          "
+          >MY</span
+        >
+      </div>
+    </div>
+    <span
+      class="font-lora"
+      style="
+        font-weight: 700;
+        font-style: italic;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -0.03em;
+        color: #000;
+      "
+    >
+      PORTOFOLIO
+    </span>
+  </div>
+</header>
+
+<nav
+  style="position: absolute; left: 0; top: 166px; width: 1360px; z-index: 10"
+>
+  <a href="/index.html" class="pull-cord nav-intro" style="left: 205px">
+    <div class="cord-line intro"></div>
+    <div class="cord-handle intro-pill" style="position: relative">
+      <span class="retro-tape"></span>
+      <span class="pill-dots"><i></i><i></i><i></i></span>
+      <span class="font-space">INTRODUCTION</span>
+    </div>
+  </a>
+
+  <a
+    href="/view/project.html"
+    class="pull-cord nav-project"
+    style="left: 615px"
+  >
+    <div class="cord-line proj"></div>
+    <div class="cord-handle nav-pill-white" style="width: 165px">
+      <span class="font-space">PROJECT</span>
+    </div>
+  </a>
+
+  <a
+    href="/view/contact.html"
+    class="pull-cord nav-contact"
+    style="left: 845px"
+  >
+    <div class="cord-line cont"></div>
+    <div class="cord-handle nav-pill-white" style="width: 165px">
+      <span class="font-space">CONTACT</span>
+    </div>
+  </a>
+</nav>
+
+<style>
+  /* 1. Pastikan pembungkus luar <a> transparan (hilangkan kotak hijau) */
+  #header-placeholder a.pull-cord,
+  #header-placeholder a.pull-cord.active {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  /* 2. Panjang tali gantung */
+  #header-placeholder a.pull-cord .cord-line {
+    height: 28px !important;
+  }
+  #header-placeholder a.pull-cord:hover .cord-line {
+    height: 55px !important;
+  }
+  #header-placeholder a.pull-cord.active .cord-line {
+    height: 115px !important;
+  }
+  #header-placeholder a.pull-cord.active:hover .cord-line {
+    height: 128px !important;
+  }
+
+  /* 3. Tampilan tombol saat TIDAK aktif */
+  #header-placeholder a.pull-cord:not(.active) .intro-pill,
+  #header-placeholder a.pull-cord:not(.active) .nav-pill-white {
+    width: 195px !important;
+    background: #ffffff !important;
+    justify-content: center !important;
+    padding: 0 16px !important;
+  }
+  #header-placeholder a.pull-cord:not(.active) .retro-tape,
+  #header-placeholder a.pull-cord:not(.active) .pill-dots {
+    display: none !important;
+  }
+
+  /* 4. Tampilan tombol saat AKTIF (lebar, selotip, 3 lingkaran berwarna) */
+  #header-placeholder a.pull-cord.active .intro-pill,
+  #header-placeholder a.pull-cord.active .nav-pill-white {
+    width: 300px !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    padding: 0 16px !important;
+    position: relative !important;
+  }
+
+  /* Warna latar tombol aktif tiap halaman */
+  #header-placeholder a.pull-cord.active.nav-intro .intro-pill,
+  #header-placeholder a.pull-cord.active.nav-intro .nav-pill-white {
+    background: #ffcf33 !important; /* Kuning Retro untuk Introduction */
+  }
+  #header-placeholder a.pull-cord.active.nav-proj .intro-pill,
+  #header-placeholder a.pull-cord.active.nav-proj .nav-pill-white {
+    background: #7cc6e8 !important; /* Biru Langit untuk Project */
+  }
+  #header-placeholder a.pull-cord.active.nav-cont .intro-pill,
+  #header-placeholder a.pull-cord.active.nav-cont .nav-pill-white {
+    background: #76dd77 !important; /* Hijau Mint untuk Contact */
+  }
+
+  /* Selotip miring */
+  #header-placeholder .retro-tape {
+    position: absolute;
+    left: -10px;
+    top: -12px;
+    width: 38px;
+    height: 16px;
+    background: rgba(255, 148, 120, 0.92);
+    border: 1.5px solid #000;
+    transform: rotate(-22deg);
+  }
+
+  /* 3 Lingkaran Hiasan Berwarna (Merah Koral, Putih/Kuning, Biru/Hijau) */
+  #header-placeholder .pill-dots {
+    display: flex !important;
+    gap: 6px;
+  }
+  #header-placeholder .pill-dots i {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1.8px solid #000;
+    display: inline-block;
+  }
+  #header-placeholder .pill-dots i:nth-child(1) {
+    background: #ff6b6b !important; /* Lingkaran 1: Merah Koral */
+  }
+  #header-placeholder .pill-dots i:nth-child(2) {
+    background: #ffffff !important; /* Lingkaran 2: Putih Bersih */
+  }
+  #header-placeholder .pill-dots i:nth-child(3) {
+    background: #7cc6e8 !important; /* Lingkaran 3: Biru Cerah */
+  }
+
+  /* ============ Penyeimbang Jarak Horizontal 3 Tombol Navbar (Kanvas 1360px) ============ */
+
+  /* 1. Posisi Dasar Simetris (Saat 1 tombol aktif atau default) */
+  #header-placeholder a.pull-cord:nth-of-type(1) {
+    left: 255px !important; /* INTRODUCTION */
+  }
+  #header-placeholder a.pull-cord:nth-of-type(2) {
+    left: 615px !important; /* PROJECT */
+  }
+  #header-placeholder a.pull-cord:nth-of-type(3) {
+    left: 935px !important; /* CONTACT */
+  }
+
+  /* 2. Penyesuaian Otomatis Saat INTRODUCTION Aktif (Melebar 300px ke kanan) */
+  #header-placeholder a.pull-cord:nth-of-type(1).active {
+    left: 215px !important;
+  }
+  #header-placeholder
+    a.pull-cord:nth-of-type(1).active
+    ~ a.pull-cord:nth-of-type(2) {
+    left: 635px !important;
+  }
+  #header-placeholder
+    a.pull-cord:nth-of-type(1).active
+    ~ a.pull-cord:nth-of-type(3) {
+    left: 945px !important;
+  }
+
+  /* 3. Penyesuaian Otomatis Saat PROJECT Aktif (Melebar 300px di tengah) */
+  #header-placeholder a.pull-cord:nth-of-type(2).active {
+    left: 555px !important;
+  }
+  #header-placeholder
+    a.pull-cord:nth-of-type(2).active
+    ~ a.pull-cord:nth-of-type(3) {
+    left: 965px !important;
+  }
+
+  /* 4. Penyesuaian Otomatis Saat CONTACT Aktif (Melebar 300px di kanan) */
+  #header-placeholder a.pull-cord:nth-of-type(3).active {
+    left: 880px !important;
+  }
+</style>
+
+<script>
+  (function () {
+    const path = window.location.pathname;
+    const currentPage = path.split("/").pop() || "index.html";
+    const links = document.querySelectorAll("#header-placeholder a.pull-cord");
+
+    links.forEach((link) => {
+      link.classList.remove("active", "nav-intro", "nav-proj", "nav-cont");
+      const hrefPage = (link.getAttribute("href") || "").split("/").pop();
+
+      const isIntroPage =
+        (currentPage === "index.html" ||
+          currentPage === "" ||
+          currentPage === "porto.html") &&
+        (hrefPage === "porto.html" || hrefPage === "index.html");
+
+      if (isIntroPage || hrefPage === currentPage) {
+        link.classList.add("active");
+        if (hrefPage.includes("porto") || hrefPage.includes("index"))
+          link.classList.add("nav-intro");
+        else if (hrefPage.includes("project")) link.classList.add("nav-proj");
+        else if (hrefPage.includes("contact")) link.classList.add("nav-cont");
+
+        const pill = link.querySelector(".intro-pill, .nav-pill-white");
+        if (pill) {
+          if (!pill.querySelector(".retro-tape")) {
+            const tape = document.createElement("span");
+            tape.className = "retro-tape";
+            pill.prepend(tape);
+          }
+          if (!pill.querySelector(".pill-dots")) {
+            const dots = document.createElement("span");
+            dots.className = "pill-dots";
+            dots.innerHTML = "<i></i><i></i><i></i>";
+            pill.insertBefore(dots, pill.children[1] || null);
+          }
+        }
+      }
+    });
+  })();
+</script>
