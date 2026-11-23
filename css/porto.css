@@ -1,3 +1,18 @@
+body.page-intro {
+  min-width: 1280px;
+  background: linear-gradient(115deg, #f4d839 45%, #ffef96 88%);
+  overflow-x: hidden;
+}
+
+body.page-intro .full-header-bg {
+  min-width: 1280px;
+}
+
+body.page-intro .canvas-wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
 /* ============ Tema Stopmap Tali Lamaran Kerja x Y2K Retro ============ */
 body.page-intro {
   background: linear-gradient(115deg, #f4d839 45%, #ffef96 88%);

@@ -741,6 +741,28 @@ button:hover {
   }
 }
 
+body.page-intro {
+  min-width: 1280px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body.page-intro .full-header-bg {
+  min-width: 1280px;
+}
+
+body.page-intro .canvas-wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+body.page-intro .canvas-content {
+  width: 1280px;
+  zoom: 1 !important;
+}
+
 /* ============ Styling/* ============ Styling Khusus Halaman Contact ============ */
 body.page-contact {
   min-width: 1280px;
