@@ -10,8 +10,8 @@
     align-items: center;
   "
 >
-  <img src="/images/accessories-1.png" class="hiasan acc-1" alt="" />
-  <img src="/images/eyes.png" class="hiasan eyes" alt="Eyes" />
+  <img data-image="accessories-1.png" class="hiasan acc-1" alt="" />
+  <img data-image="eyes.png" class="hiasan eyes" alt="Eyes" />
 
   <div style="display: flex; align-items: flex-end; gap: 18px">
     <div style="position: relative; display: inline-block">
@@ -113,7 +113,12 @@
 <nav
   style="position: absolute; left: 0; top: 166px; width: 1360px; z-index: 10"
 >
-  <a href="../index.html" class="pull-cord nav-intro" style="left: 205px">
+  <a
+    href="../index.html"
+    data-page="intro"
+    class="pull-cord nav-intro"
+    style="left: 205px"
+  >
     <div class="cord-line intro"></div>
     <div class="cord-handle intro-pill" style="position: relative">
       <span class="retro-tape"></span>
@@ -124,6 +129,7 @@
 
   <a
     href="./view/project.html"
+    data-page="project"
     class="pull-cord nav-project"
     style="left: 615px"
   >
@@ -135,6 +141,7 @@
 
   <a
     href="./view/contact.html"
+    data-page="contact"
     class="pull-cord nav-contact"
     style="left: 845px"
   >
@@ -289,6 +296,30 @@
     const path = window.location.pathname;
     const currentPage = path.split("/").pop() || "index.html";
     const links = document.querySelectorAll("#header-placeholder a.pull-cord");
+    const isViewPage = path.split("/").slice(-2, -1)[0] === "view";
+    const pagePaths = isViewPage
+      ? {
+          intro: "../index.html",
+          project: "project.html",
+          contact: "contact.html",
+        }
+      : {
+          intro: "index.html",
+          project: "view/project.html",
+          contact: "view/contact.html",
+        };
+
+    links.forEach((link) => {
+      const page = link.dataset.page;
+      if (pagePaths[page]) link.href = pagePaths[page];
+    });
+
+    document
+      .querySelectorAll("#header-placeholder img[data-image]")
+      .forEach((image) => {
+        const imagePath = isViewPage ? "../images/" : "images/";
+        image.src = `${imagePath}${image.dataset.image}`;
+      });
 
     links.forEach((link) => {
       link.classList.remove("active", "nav-intro", "nav-proj", "nav-cont");
