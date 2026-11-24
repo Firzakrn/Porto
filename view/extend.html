@@ -671,10 +671,12 @@
     ];
 
     /* Cover buku diambil otomatis dari internet (AniList) berdasarkan `search`.
+       Atur `category` per item menjadi "COMIC" atau "NOVEL".
        Kalau mau pakai gambar sendiri, isi `cover: "https://...jpg"` (menang dari auto). */
     const BOOKS = [
       {
         title: "Barbarian Quest",
+        category: "NOVEL",
         search: "Barbarian Quest",
         cover: "",
         desc: "a spirited barbarian warrior from the Stone Axe Tribe who crosses the forbidden Sky Mountains into a civilized medieval world.",
@@ -684,6 +686,7 @@
       },
       {
         title: "Kill the Villainess",
+        category: "MANHWA/COMIC ● NOVEL",
         search: "Kill the Villainess",
         cover: "",
         desc: "a modern woman trapped inside a romance novel who tries to die so she can return to her real life",
@@ -693,6 +696,7 @@
       },
       {
         title: "Tyrant of the Tower Defense Game",
+        category: "MANHWA/COMIC",
         search: "Tyrant of the Tower Defense Game",
         cover: "",
         desc: "a gamer who wakes up inside the notoriously brutal tower defense game Protect the Empire as Prince Ash after beating its hardest difficulty.",
@@ -702,6 +706,7 @@
       },
       {
         title: "Her Tale of Shim Chong",
+        category: "MANHWA/COMIC",
         search: "Her Tale of Shim Chong",
         cover: "",
         desc: "historical drama that reimagines a classic Korean folktale through the profound bond between a destitute beggar girl and a noblewoman.",
@@ -711,6 +716,7 @@
       },
       {
         title: "The Famous Five ",
+        category: "NOVEL",
         search: "Lima Sekawan",
         cover:
           "https://m.media-amazon.com/images/I/A1BrXFzlO-L._UF1000,1000_QL80_.jpg",
@@ -720,16 +726,19 @@
         badge: "#ff9ebb",
       },
       {
-        title: "Proof of Dignity",
-        search: "Proof of Dignity",
-        cover: "",
-        desc: "an underprivileged prodigy navigating classism at a prestigious school",
+        title: "Made in Abyss",
+        category: "MANGA/COMIC ● ANIMATED",
+        search: "Made in Abyss",
+        cover:
+          "https://m.media-amazon.com/images/M/MV5BZjM4ODA5YTktNjliMC00NzI5LTk3ZTctZWYyYWEyNTJhMmQzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        desc: "a young orphan girl named Riko and a amnesiac robot boy named Reg who descend into a massive, mysterious chasm called the Abyss",
         a: "#6d28d9",
         b: "#1e1b4b",
         badge: "#ffcf33",
       },
       {
         title: "The Children of the Holy Emperor",
+        category: "NOVEL",
         search: "The Children of the Holy Emperor",
         cover:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTa_4Bn3kS4J029hGs49FbpqO0dnE2oy1JglOdAuonmg&s=10",
@@ -740,6 +749,7 @@
       },
       {
         title: "Hand Jumper",
+        category: "COMIC",
         search: "Hand Jumper",
         cover:
           "https://swebtoon-phinf.pstatic.net/20250827_75/175625714777854FBr_JPEG/Thumb_Poster_2702.jpg?type=crop540_540",
@@ -999,8 +1009,6 @@
       return wrap;
     }
 
-    BOOKS.forEach((b, i) => (b.category = "BACAAN #" + pad(i + 1)));
-
     safe("poster", () =>
       createFan(document.getElementById("poster-fan"), POSTERS, buildPoster, {
         stub: "POSTCARD",
@@ -1010,7 +1018,7 @@
     safe("buku", () =>
       createFan(document.getElementById("book-fan"), BOOKS, buildBook, {
         stub: "BOOK",
-        stamp: "READ",
+        stamp: "MUST READ",
       }),
     );
 
