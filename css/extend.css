@@ -1,0 +1,1136 @@
+/* ==========================================================================
+   extend.css — PELENGKAP style.css (bukan pengganti)
+   --------------------------------------------------------------------------
+   Aturan main file ini:
+   - Semua selector di-scope ke .extend-wrapper / class ext-*, fan-*, radio-*
+     jadi tidak mengubah apa pun di style.css.
+   - TIDAK mendefinisikan ulang: reset (*), body, background halaman,
+     .window-dots / .dot-*, .halftone, font-*, dsb. -> itu sudah ada di style.css
+     dan langsung dipakai ulang dari sana.
+   - Warna yang berulang dijadikan variabel lokal di .extend-wrapper.
+   ========================================================================== */
+
+.extend-wrapper {
+  /* palet lokal (sama dengan warna di style.css, hanya diberi nama) */
+  --x-ink: #000;
+  --x-paper: #fffbe6;
+  --x-yellow: #ffcf33;
+  --x-green: #76dd77;
+  --x-blue: #7cc6e8;
+  --x-pink: #ff9ebb;
+  --x-coral: #ff7657;
+  --x-steel: #4682b4;
+  --x-lcd: #18231c;
+  --x-lcd-text: #5cff7a;
+
+  width: 1030px;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 4;
+}
+
+.extend-wrapper > section {
+  margin-bottom: 52px;
+}
+
+.extend-zigzag {
+  margin-bottom: 42px;
+}
+
+/* ---------- Window (dipakai semua blok) ---------- */
+.ext-window {
+  position: relative;
+  background: var(--x-paper);
+  border: 3px solid var(--x-ink);
+  border-radius: 12px;
+  box-shadow: 9px 9px 0 var(--x-ink);
+}
+
+.ext-window-bar {
+  height: 36px;
+  background: var(--bar, var(--x-yellow));
+  border-bottom: 3px solid var(--x-ink);
+  border-radius: 9px 9px 0 0;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ext-window-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: 0.4px;
+}
+
+.ext-window-body {
+  padding: 24px 26px 28px;
+}
+
+.ext-sticker {
+  position: absolute;
+  pointer-events: none;
+  z-index: 15;
+  filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.25));
+}
+
+.ext-mini-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* ============ 1. Experience ============ */
+.ext-exp-grid {
+  display: grid;
+  grid-template-columns: 1.32fr 0.88fr;
+  gap: 22px;
+}
+
+.ext-subcard {
+  background: #fff;
+  border: 2.5px solid var(--x-ink);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 var(--x-ink);
+  padding: 18px 20px;
+}
+
+.ext-flex-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ext-pill-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ext-pill {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border: 2px solid var(--x-ink);
+  border-radius: 999px;
+}
+
+.ext-card-heading {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 700;
+  font-size: 19.5px;
+  line-height: 1.28;
+  margin-bottom: 10px;
+}
+
+.ext-list {
+  padding-left: 18px;
+  font-family: "Lora", Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ext-mm-box {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 2px dashed var(--x-ink);
+}
+
+.ext-mm-caption {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ext-mm-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: end;
+}
+
+.ext-mm-thumb {
+  background: var(--x-paper);
+  border: 2px solid var(--x-ink);
+  border-radius: 7px;
+  padding: 5px;
+  box-shadow: 3px 3px 0 var(--x-ink);
+  text-align: center;
+}
+
+.ext-mm-ratio {
+  position: relative;
+  width: 100%;
+  border: 1.5px solid var(--x-ink);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.ext-mm-ratio iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.ext-mm-thumb span {
+  display: block;
+  margin-top: 5px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.ext-privacy-note {
+  margin-top: 18px;
+  background: #f5f5dc;
+  border: 2px dashed var(--x-ink);
+  border-radius: 8px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ext-privacy-note strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11.5px;
+  margin-bottom: 2px;
+}
+
+.ext-privacy-note p {
+  font-family: "Lora", Georgia, serif;
+  font-size: 12px;
+  line-height: 1.38;
+  color: #222;
+}
+
+/* ==========================================================================
+   FAN CAROUSEL (dipakai 2x: poster & bacaan)
+   3 kartu pose kipas — tengah highlight, kiri/kanan gelap, judul di bawah
+   ========================================================================== */
+.fan {
+  --cw: 262px;
+  --ch: 384px;
+}
+
+.fan-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.fan-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--x-yellow);
+  border: 3px solid var(--x-ink);
+  box-shadow: 4px 4px 0 var(--x-ink);
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.fan-arrow:hover {
+  background: var(--x-green);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--x-ink);
+}
+
+.fan-arrow:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--x-ink);
+}
+
+.fan-stage {
+  position: relative;
+  flex: 1;
+  height: calc(var(--ch) + 50px);
+  outline: none;
+}
+
+.fan-card {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: var(--cw);
+  height: var(--ch);
+  margin-left: calc(var(--cw) / -2);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 10px;
+  background: #fff;
+  border: 3px solid var(--x-ink);
+  border-radius: 14px;
+  box-shadow: 6px 6px 0 var(--x-ink);
+  transform-origin: 50% 100%;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+/* selotip postcard */
+.fan-card::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 66px;
+  height: 22px;
+  margin-left: -33px;
+  background: rgba(255, 235, 120, 0.92);
+  border: 1.5px solid var(--x-ink);
+  transform: rotate(-3deg);
+  z-index: 3;
+}
+
+/* lapisan gelap untuk kartu samping */
+.fan-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 11px;
+  background: #0b0b0b;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.35s ease;
+}
+
+.fan-card.is-center {
+  z-index: 10;
+  transform: translateY(-6px) scale(1.04);
+  box-shadow:
+    10px 10px 0 var(--x-ink),
+    0 0 0 5px var(--x-yellow);
+}
+
+.fan-card.is-left {
+  z-index: 6;
+  transform: translate(-225px, 10px) rotate(-9deg) scale(0.88);
+  cursor: pointer;
+}
+
+.fan-card.is-right {
+  z-index: 6;
+  transform: translate(225px, 10px) rotate(9deg) scale(0.88);
+  cursor: pointer;
+}
+
+.fan-card.is-left::after,
+.fan-card.is-right::after {
+  opacity: 0.58;
+}
+
+.fan-card.is-left:hover::after,
+.fan-card.is-right:hover::after {
+  opacity: 0.4;
+}
+
+.fan-card.is-far {
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.7);
+}
+
+.fan-card:not(.is-center) iframe {
+  pointer-events: none;
+}
+
+.fan-media {
+  position: relative;
+  flex: 1;
+  border: 2px solid var(--x-ink);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f4f1e6;
+}
+
+.fan-media iframe,
+.fan-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.fan-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fan-cover-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  font-family: "Handjet", monospace;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 2px 2px 0 var(--x-ink);
+}
+
+.fan-stub {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 2px dashed var(--x-ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #222;
+}
+
+.fan-stamp {
+  padding: 1px 6px;
+  border: 1.5px dashed var(--x-ink);
+  background: var(--x-yellow);
+  font-size: 9.5px;
+  transform: rotate(4deg);
+}
+
+/* Judul di bawah kartu */
+.fan-caption {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.fan-plaque {
+  display: inline-block;
+  min-width: 340px;
+  max-width: 600px;
+  background: var(--x-paper);
+  border: 3px solid var(--x-ink);
+  border-radius: 10px;
+  box-shadow: 6px 6px 0 var(--x-ink);
+  padding: 8px 20px 10px;
+}
+
+.fan-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 2px;
+}
+
+.fan-cat {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 9px;
+  border: 1.5px solid var(--x-ink);
+  border-radius: 999px;
+}
+
+.fan-count {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #333;
+}
+
+.fan-title {
+  font-family: "Handjet", monospace;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--x-ink);
+}
+
+.fan-sub {
+  margin: 4px auto 0;
+  font-family: "Lora", Georgia, serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.fan-sub:empty {
+  display: none;
+}
+
+.fan-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.fan-dot {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--x-ink);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.fan-dot.active {
+  background: #ff6b6b;
+  transform: scale(1.3);
+}
+
+/* ==========================================================================
+   3. RADIO 3D (ngambang) + FAVORIT
+   ========================================================================== */
+.ext-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.radio-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 470px;
+  justify-content: center;
+}
+
+/* memakai .halftone dari style.css, di sini hanya posisi/ukuran/mask */
+.radio-halftone {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 430px;
+  height: 330px;
+  margin: -165px 0 0 -215px;
+  transform: rotate(-8deg);
+  mask-image: radial-gradient(circle, #000 34%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle, #000 34%, transparent 70%);
+}
+
+.radio-scene {
+  position: relative;
+  z-index: 2;
+  perspective: 1300px;
+  padding-top: 150px;
+}
+
+/* sisi radio selain panel depan tidak boleh menangkap klik */
+.rf:not(.rf-front),
+.radio-antenna {
+  pointer-events: none;
+}
+
+/* radio diam saat kursor di atasnya, jadi gampang ditekan */
+.radio-scene:hover .radio-float,
+.radio-scene:hover .radio-ground {
+  animation-play-state: paused;
+}
+
+.radio-float {
+  transform-style: preserve-3d;
+  animation: radioFloat 4.8s ease-in-out infinite;
+}
+
+.radio-tilt {
+  --rw: 410px;
+  --rh: 236px;
+  --rd: 104px;
+  position: relative;
+  width: var(--rw);
+  height: var(--rh);
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, -10deg)) rotateY(var(--ry, -18deg));
+  transition: transform 0.25s ease-out;
+}
+
+/* sisi-sisi kotak 3D */
+.rf {
+  position: absolute;
+  border: 3px solid var(--x-ink);
+  border-radius: 8px;
+  backface-visibility: hidden;
+}
+
+.rf-front {
+  inset: 0;
+  background: var(--x-coral);
+  transform: translateZ(calc(var(--rd) / 2));
+}
+
+.rf-back {
+  inset: 0;
+  background: #d9573b;
+  transform: rotateY(180deg) translateZ(calc(var(--rd) / 2));
+}
+
+.rf-right,
+.rf-left {
+  width: var(--rd);
+  height: var(--rh);
+  left: calc((var(--rw) - var(--rd)) / 2);
+  top: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 10px,
+      rgba(0, 0, 0, 0.16) 10px 12px
+    ),
+    #d9573b;
+}
+
+.rf-right {
+  transform: rotateY(90deg) translateZ(calc(var(--rw) / 2));
+}
+
+.rf-left {
+  transform: rotateY(-90deg) translateZ(calc(var(--rw) / 2));
+}
+
+.rf-top,
+.rf-bottom {
+  width: var(--rw);
+  height: var(--rd);
+  left: 0;
+  top: calc((var(--rh) - var(--rd)) / 2);
+}
+
+.rf-top {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 9px,
+      rgba(0, 0, 0, 0.14) 9px 11px
+    ),
+    #ff9478;
+  transform: rotateX(90deg) translateZ(calc(var(--rh) / 2));
+}
+
+.rf-bottom {
+  background: #a8412b;
+  transform: rotateX(-90deg) translateZ(calc(var(--rh) / 2));
+}
+
+/* antena */
+.radio-antenna {
+  position: absolute;
+  left: 82%;
+  bottom: calc(100% - 4px);
+  width: 8px;
+  height: 160px;
+  background: linear-gradient(90deg, #fff, #b9b9b9);
+  border: 2.5px solid var(--x-ink);
+  border-radius: 4px;
+  transform-origin: 50% 100%;
+  transform: rotate(24deg);
+}
+
+.radio-antenna::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -11px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  background: var(--x-yellow);
+  border: 2.5px solid var(--x-ink);
+  border-radius: 50%;
+}
+
+/* isi panel depan */
+.rf-inner {
+  height: 100%;
+  padding: 11px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.rf-panel {
+  display: grid;
+  grid-template-columns: 112px 1fr 46px;
+  gap: 10px;
+  align-items: center;
+  height: 100px;
+}
+
+.rf-speaker {
+  height: 100%;
+  border: 2.5px solid var(--x-ink);
+  border-radius: 7px;
+  background-color: #2b2b2b;
+  background-image: radial-gradient(#000 1.6px, transparent 1.6px);
+  background-size: 6px 6px;
+  transition: transform 0.2s ease;
+}
+
+.rf-dial {
+  height: 100%;
+  background: var(--x-lcd);
+  border: 2.5px solid var(--x-ink);
+  border-radius: 7px;
+  padding: 7px 9px;
+  overflow: hidden;
+}
+
+.rf-scale {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 9px;
+  color: #f6dd43;
+  border-bottom: 1.5px solid #475569;
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+}
+
+.rf-needle {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: 50%;
+  width: 3px;
+  background: #ff4d4d;
+  box-shadow: 0 0 6px #ff4d4d;
+  transition: left 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rf-lcd-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--x-yellow);
+}
+
+.rf-eq {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+
+.rf-eq b {
+  width: 3px;
+  height: 3px;
+  background: var(--x-lcd-text);
+}
+
+.rf-marquee {
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--x-lcd-text);
+}
+
+.rf-marquee span {
+  display: inline-block;
+}
+
+.is-playing .rf-marquee span {
+  padding-left: 100%;
+  animation: lcdScroll 9s linear infinite;
+}
+
+.rf-knob-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.rf-knob {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f4f1e6;
+  border: 2.5px solid var(--x-ink);
+  box-shadow: 2px 2px 0 var(--x-ink);
+  transform: rotate(-60deg);
+  transition: transform 0.45s ease;
+}
+
+.rf-knob::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 3px;
+  height: 11px;
+  margin-left: -1.5px;
+  background: #ff4d4d;
+}
+
+/* tombol lagu */
+.rf-keys {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.radio-key {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 6px 8px 7px;
+  background: #f4f1e6;
+  border: 2.5px solid var(--x-ink);
+  border-radius: 7px;
+  box-shadow: 3px 3px 0 var(--x-ink);
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.2s ease;
+}
+
+.radio-key:hover {
+  background: #fff;
+  box-shadow: 3px 3px 0 var(--x-ink);
+}
+
+.radio-key:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--x-ink);
+}
+
+.rk-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rk-ch {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  background: #bce5ed;
+  border: 1.5px solid var(--x-ink);
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+.rk-led {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.8px solid var(--x-ink);
+  background: #8b8b8b;
+}
+
+.radio-key strong {
+  font-family: "Lora", Georgia, serif;
+  font-size: 11.5px;
+  line-height: 1.15;
+}
+
+.radio-key small {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9.5px;
+  color: #333;
+}
+
+/* tombol NYALA */
+.radio-key.on {
+  background: var(--x-yellow);
+  transform: translate(2px, 2px);
+  box-shadow:
+    1px 1px 0 var(--x-ink),
+    0 0 18px 4px rgba(255, 207, 51, 0.85);
+}
+
+.radio-key.on .rk-led {
+  background: var(--x-lcd-text);
+  box-shadow: 0 0 8px 2px var(--x-lcd-text);
+}
+
+.radio-key.on strong {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.95);
+}
+
+.is-playing .rf-speaker {
+  animation: speakerPulse 0.5s ease-in-out infinite alternate;
+}
+
+.is-playing .rf-eq b {
+  animation: eqBounce 0.7s ease-in-out infinite alternate;
+}
+
+.is-playing .rf-eq b:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.is-playing .rf-eq b:nth-child(3) {
+  animation-delay: -0.45s;
+}
+.is-playing .rf-eq b:nth-child(4) {
+  animation-delay: -0.1s;
+}
+.is-playing .rf-eq b:nth-child(5) {
+  animation-delay: -0.35s;
+}
+
+.radio-ground {
+  width: 300px;
+  height: 26px;
+  margin: 40px auto 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(7px);
+  animation: radioShadow 4.8s ease-in-out infinite;
+}
+
+.radio-hint {
+  position: relative;
+  z-index: 2;
+  margin-top: 14px;
+  padding: 3px 14px;
+  background: var(--x-paper);
+  border: 2.5px solid var(--x-ink);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--x-ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* pemutar YouTube tersembunyi: HARUS tetap ter-render dan >= 200x200 agar mau memutar */
+.radio-yt-host {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  height: 220px;
+  opacity: 0.01;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.radio-yt-host iframe {
+  width: 220px;
+  height: 220px;
+  border: 0;
+}
+
+@keyframes radioFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes radioShadow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(0.82);
+    opacity: 0.55;
+  }
+}
+
+@keyframes lcdScroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes eqBounce {
+  from {
+    height: 3px;
+  }
+  to {
+    height: 14px;
+  }
+}
+
+@keyframes speakerPulse {
+  to {
+    transform: scale(1.04);
+  }
+}
+
+/* Favorit (palet & snack) */
+.ext-duo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.ext-swatch-btn,
+.ext-snack-card,
+.ext-hobby-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 2px solid var(--x-ink);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--x-ink);
+  padding: 8px 11px;
+  text-align: left;
+}
+
+.ext-swatch-btn {
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.ext-swatch-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--x-ink);
+}
+
+.ext-swatch-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--x-ink);
+  flex-shrink: 0;
+}
+
+.ext-swatch-btn strong,
+.ext-snack-card strong,
+.ext-hobby-item strong {
+  display: block;
+  font-family: "Lora", Georgia, serif;
+  font-size: 14px;
+}
+
+.ext-swatch-btn small,
+.ext-snack-card small,
+.ext-hobby-item small {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  color: #444;
+}
+
+/* ============ 4. Hobi & Rak Bacaan ============ */
+.ext-hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ext-hobby-item small {
+  font-size: 10.5px;
+}
+
+.ext-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ext-divider::before,
+.ext-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 2px dashed var(--x-ink);
+}
+
+.ext-divider span {
+  padding: 1px 10px;
+  background: var(--x-pink);
+  border: 1.5px solid var(--x-ink);
+  border-radius: 999px;
+}
+
+/* ============ Toast ============ */
+.ext-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--x-lcd, #18231c);
+  color: #5cff7a;
+  border: 2.5px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transition: all 0.22s ease;
+}
+
+.ext-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .radio-float,
+  .radio-ground,
+  .is-playing .rf-eq b,
+  .is-playing .rf-speaker,
+  .is-playing .rf-marquee span {
+    animation: none;
+  }
+  .fan-card,
+  .radio-tilt {
+    transition: none;
+  }
+}

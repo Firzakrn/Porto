@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/extend.css" />
   </head>
   <body class="page-intro">
     <!-- Full-Bleed Header Band -->
@@ -403,6 +404,7 @@
         ></div>
       </div>
     </div>
+    <div id="extend-placeholder"></div>
 
     <script>
       fetch("./view/head.html")
@@ -411,6 +413,14 @@
           const box = document.getElementById("header-placeholder");
           box.innerHTML = html;
           box.querySelectorAll("script").forEach((s) => eval(s.innerText));
+        });
+
+      fetch("./view/extend.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const extBox = document.getElementById("extend-placeholder");
+          extBox.innerHTML = html;
+          extBox.querySelectorAll("script").forEach((s) => eval(s.innerText));
         });
     </script>
   </body>

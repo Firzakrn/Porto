@@ -136,189 +136,16 @@
 
         <!-- ==================== AREA STRUK TUMPANG TINDIH ==================== -->
         <div class="receipt-stage">
-          <!-- STRUK KIRI -->
-          <div
-            id="card-left-wrap"
-            class="receipt-shadow-left"
-            title="Klik untuk menimpa struk kanan"
-          >
-            <div class="receipt-jagged-left">
-              <div>
-                <svg
-                  width="100%"
-                  height="12"
-                  viewBox="0 0 400 16"
-                  preserveAspectRatio="none"
-                >
-                  <polyline
-                    points="0,12 15,3 30,12 45,3 60,12 75,3 90,12 105,3 120,12 135,3 150,12 165,3 180,12 195,3 210,12 225,3 240,12 255,3 270,12 285,3 300,12 315,3 330,12 345,3 360,12 375,3 390,12 400,6"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="4.5"
-                  />
-                </svg>
-              </div>
+          <!-- Wadah Stack Proyek (1 di Desktop, 3 bertumpuk ke bawah di Layar Tinggi/HP) -->
+          <div id="projects-stack-list" class="projects-stack-list"></div>
 
-              <!-- Gambar Promosi Langsung Tanpa Bingkai Kotak -->
-              <div class="my-auto py-1 flex items-center justify-center">
-                <img
-                  id="proj-promo-img"
-                  src=""
-                  alt="Project Preview"
-                  class="w-full h-[380px] object-contain scale-[1.08]"
-                  style="filter: drop-shadow(6px 8px 0px rgba(0, 0, 0, 0.35))"
-                />
-              </div>
-
-              <div>
-                <div class="mb-2.5">
-                  <svg
-                    width="100%"
-                    height="12"
-                    viewBox="0 0 400 16"
-                    preserveAspectRatio="none"
-                  >
-                    <polyline
-                      points="0,12 15,3 30,12 45,3 60,12 75,3 90,12 105,3 120,12 135,3 150,12 165,3 180,12 195,3 210,12 225,3 240,12 255,3 270,12 285,3 300,12 315,3 330,12 345,3 360,12 375,3 390,12 400,6"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="4.5"
-                    />
-                  </svg>
-                </div>
-
-                <div
-                  class="flex items-center justify-between bg-[#ffcf33] border-2 border-black px-3 py-1.5 font-mono font-bold text-xs shadow-[3px_3px_0px_#000]"
-                >
-                  <span id="proj-code">PREVIEW #01</span>
-                  <span id="proj-stack">HTML • CSS • RETRO</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- STRUK KANAN -->
-          <div
-            id="card-right-wrap"
-            class="receipt-shadow-right"
-            title="Klik untuk mengangkat ke depan navbar"
-          >
-            <div class="receipt-jagged-right">
-              <div>
-                <!-- Garis Zig-Zag Atas -->
-                <div class="mb-3">
-                  <svg
-                    width="100%"
-                    height="12"
-                    viewBox="0 0 600 16"
-                    preserveAspectRatio="none"
-                  >
-                    <polyline
-                      points="0,12 18,3 36,12 54,3 72,12 90,3 108,12 126,3 144,12 162,3 180,12 198,3 216,12 234,3 252,12 270,3 288,12 306,3 324,12 342,3 360,12 378,3 396,12 414,3 432,12 450,3 468,12 486,3 504,12 522,3 540,12 558,3 576,12 600,6"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="4.5"
-                    />
-                  </svg>
-                </div>
-
-                <!-- Baris Badge Atas -->
-                <div
-                  id="proj-badges"
-                  class="flex flex-wrap items-center gap-2 mb-2"
-                ></div>
-
-                <!-- Judul Project -->
-                <h1
-                  id="proj-title"
-                  style="
-                    font-family: &quot;Handjet&quot;, monospace;
-                    font-size: 46px;
-                    font-weight: 900;
-                    line-height: 0.95;
-                    color: #000;
-                  "
-                  class="mb-2"
-                ></h1>
-
-                <!-- Deskripsi Project + Link Tambahan -->
-                <p
-                  id="proj-desc"
-                  class="font-mono text-[13px] leading-snug text-[#111] mb-1.5"
-                ></p>
-                <div id="proj-extra-link" class="mb-2"></div>
-
-                <!-- Kotak Kontribusi + 3 Prangko Dokumentasi -->
-                <div
-                  class="bg-white border-[2.5px] border-black rounded-lg p-3 shadow-[4px_4px_0px_#000] mb-3"
-                >
-                  <div
-                    id="proj-contrib-header"
-                    class="font-mono font-black text-[11px] uppercase tracking-wider mb-1 flex items-center justify-between"
-                  ></div>
-                  <div
-                    id="proj-contributors"
-                    class="font-mono text-[11.5px] space-y-0.5 text-black"
-                  ></div>
-
-                  <!-- 3 Prangko Dokumentasi -->
-                  <div
-                    class="mt-2 pt-1.5 border-t-2 border-dashed border-black"
-                  >
-                    <div class="font-mono font-bold text-[10px] text-gray-700">
-                      Documentation (click the image)
-                    </div>
-                    <div id="proj-doc-stamps" class="doc-stamps-row"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bagian Bawah Struk Kanan -->
-              <div>
-                <div class="mb-3">
-                  <svg
-                    width="100%"
-                    height="12"
-                    viewBox="0 0 600 16"
-                    preserveAspectRatio="none"
-                  >
-                    <polyline
-                      points="0,12 18,3 36,12 54,3 72,12 90,3 108,12 126,3 144,12 162,3 180,12 198,3 216,12 234,3 252,12 270,3 288,12 306,3 324,12 342,3 360,12 378,3 396,12 414,3 432,12 450,3 468,12 486,3 504,12 522,3 540,12 558,3 576,12 600,6"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="4.5"
-                    />
-                  </svg>
-                </div>
-
-                <div class="flex items-center justify-between">
-                  <a
-                    id="proj-action-btn"
-                    href="#"
-                    target="_blank"
-                    onclick="event.stopPropagation()"
-                    class="font-mono font-black text-sm text-black bg-[#76dd77] border-[2.5px] border-black px-5 py-2 rounded-lg shadow-[4px_4px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-transform no-underline inline-flex items-center gap-2"
-                  >
-                    Github Repo ↗
-                  </a>
-
-                  <div
-                    class="bg-white border-2 border-black rounded px-3 py-1.5 shadow-[3px_3px_0px_#000] font-mono font-bold text-xs flex items-center gap-2"
-                  >
-                    <i class="fas fa-hourglass-half"></i>
-                    <span>Please wait...</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Navigasi Bulat Atas-Bawah di Sisi Kanan -->
-          <div class="flex flex-col items-center gap-3 self-center ml-5 z-40">
+          <!-- Navigasi Bulat Atas-Bawah di Sisi Kanan (Sticky agar mudah dijangkau) -->
+          <div class="nav-controls-column">
             <button
               id="btn-prev"
               type="button"
               class="w-11 h-11 rounded-full bg-white border-[2.5px] border-black shadow-[3px_3px_0px_#000] flex items-center justify-center hover:bg-[#ffcf33] cursor-pointer"
+              title="Proyek Sebelumnya"
             >
               <i class="fas fa-chevron-up"></i>
             </button>
@@ -330,6 +157,7 @@
               id="btn-next"
               type="button"
               class="w-11 h-11 rounded-full bg-[#76dd77] border-[2.5px] border-black shadow-[3px_3px_0px_#000] flex items-center justify-center hover:bg-[#ffcf33] cursor-pointer"
+              title="Turun 1 Proyek"
             >
               <i class="fas fa-chevron-down"></i>
             </button>
@@ -554,25 +382,12 @@
 
       let currentIndex = 0;
 
-      const leftWrap = document.getElementById("card-left-wrap");
-      const rightWrap = document.getElementById("card-right-wrap");
-
-      leftWrap.addEventListener("click", (e) => {
-        e.stopPropagation();
-        rightWrap.classList.remove("is-front-navbar");
-        leftWrap.classList.toggle("is-front");
-      });
-
-      rightWrap.addEventListener("click", (e) => {
-        e.stopPropagation();
-        leftWrap.classList.remove("is-front");
-        rightWrap.classList.toggle("is-front-navbar");
-      });
-
-      document.addEventListener("click", () => {
-        leftWrap.classList.remove("is-front");
-        rightWrap.classList.remove("is-front-navbar");
-      });
+      function getVisibleCount() {
+        const isTallViewport =
+          window.innerHeight > 1450 ||
+          window.innerHeight / window.innerWidth > 1.25;
+        return isTallViewport ? 4 : 1;
+      }
 
       function openLightbox(src, caption) {
         document.getElementById("lightbox-img").src = src;
@@ -580,35 +395,27 @@
         document.getElementById("doc-lightbox").classList.add("open");
       }
 
-      // Animasi slider jatuh dari atas ke bawah pada kedua struk
-      function triggerDropSlide() {
-        leftWrap.classList.remove("anim-drop-slide");
-        rightWrap.classList.remove("anim-drop-slide");
-        void leftWrap.offsetWidth;
-        void rightWrap.offsetWidth;
-        leftWrap.classList.add("anim-drop-slide");
-        rightWrap.classList.add("anim-drop-slide");
+      function saveContactTrigger(msg) {
+        localStorage.setItem(
+          "contact-form-data",
+          JSON.stringify({
+            name: "",
+            email: "",
+            topic: "Comment",
+            message: msg,
+          }),
+        );
       }
 
-      function renderProject(idx) {
-        const p = PROJECTS[idx];
-        triggerDropSlide();
+      // Membuat HTML 1 pasang struk proyek
+      function buildProjectPairHTML(p, slotPosition, actualIndex) {
+        const isPrimary = slotPosition === 0;
+        const slotTag = isPrimary
+          ? `<span class="font-mono font-black text-xs px-2.5 py-0.5 bg-[#76dd77] text-black border-2 border-black rounded-full">● ACTIVE</span>`
+          : `<span class="font-mono font-bold text-xs px-2.5 py-0.5 bg-gray-200 text-gray-800 border-2 border-black rounded-full">PREVIOUS #${slotPosition}</span>`;
 
-        document.getElementById("proj-code").textContent = p.code;
-        document.getElementById("proj-stack").textContent = p.stack;
-        document.getElementById("proj-promo-img").src = p.promoImg;
-        document.getElementById("proj-title").textContent = p.title;
-        document.getElementById("proj-desc").textContent = p.desc;
-
-        const extraLinkEl = document.getElementById("proj-extra-link");
-        if (p.extraLinkLabel) {
-          extraLinkEl.innerHTML = `<a href="${p.extraLinkUrl}" target="_blank" onclick="event.stopPropagation()" class="font-mono font-black text-xs underline text-black hover:text-[#d9483b]">${p.extraLinkLabel}</a>`;
-        } else {
-          extraLinkEl.innerHTML = "";
-        }
-
-        const badgesEl = document.getElementById("proj-badges");
         let badgesHtml = `
+          ${getVisibleCount() > 1 ? slotTag : ""}
           <span class="font-mono font-bold text-xs px-2.5 py-0.5 bg-[#f6dd43] border-2 border-black rounded-full">${p.date}</span>
           <span class="font-mono font-bold text-xs px-2.5 py-0.5 bg-[#89c4d6] border-2 border-black rounded-full">${p.type}</span>
         `;
@@ -626,31 +433,32 @@
             </span>
           `;
         }
-        badgesEl.innerHTML = badgesHtml;
 
-        const headerEl = document.getElementById("proj-contrib-header");
-        const bodyEl = document.getElementById("proj-contributors");
+        const extraLinkHtml = p.extraLinkLabel
+          ? `<div class="mb-2"><a href="${p.extraLinkUrl}" target="_blank" onclick="event.stopPropagation()" class="font-mono font-black text-xs underline text-black hover:text-[#d9483b]">${p.extraLinkLabel}</a></div>`
+          : "";
 
+        let contribHeader = "";
+        let contribBody = "";
         if (p.isFinalProject || !p.contributors) {
-          headerEl.innerHTML = `<span>My Contribution</span>`;
-          bodyEl.innerHTML = `<p class="leading-snug">${p.myContribution}</p>`;
+          contribHeader = `<span>My Contribution</span>`;
+          contribBody = `<p class="leading-snug">${p.myContribution}</p>`;
         } else {
-          headerEl.innerHTML = `
+          contribHeader = `
             <span>Contributor</span>
             <span class="px-2 py-0.5 bg-[#bce5ed] border border-black rounded">${p.contributors.length} Orang</span>
           `;
-          bodyEl.innerHTML = p.contributors
+          contribBody = p.contributors
             .map((c) => {
               const nameTag = c.url
-                ? `<a href="${c.url}" target="_blank" onclick="event.stopPropagation()" class="underline font-black text-[#1d4ed8] hover:text-black" title="Buka GitHub ${c.name}">${c.name}</a>`
+                ? `<a href="${c.url}" target="_blank" onclick="event.stopPropagation()" class="underline font-black text-[#1d4ed8] hover:text-black">${c.name}</a>`
                 : `<strong class="font-black">${c.name}</strong>`;
               return `<div>${nameTag} = <span>${c.role}</span></div>`;
             })
             .join("");
         }
 
-        // 3 Prangko Dokumentasi (Klik untuk Lightbox, Tanpa Hover)
-        document.getElementById("proj-doc-stamps").innerHTML = p.docs
+        const docsHtml = p.docs
           .slice(0, 3)
           .map((imgSrc, i) => {
             if (imgSrc) {
@@ -680,78 +488,210 @@
           })
           .join("");
 
-        const btn = document.getElementById("proj-action-btn");
-        btn.textContent = p.btnLabel;
-        btn.href = p.btnUrl;
-        if (p.isContactTrigger) {
-          btn.removeAttribute("target");
-          btn.onclick = (e) => {
-            e.stopPropagation();
-            localStorage.setItem(
-              "contact-form-data",
-              JSON.stringify({
-                name: "",
-                email: "",
-                topic: "Comment",
-                message: p.contactMsg,
-              }),
-            );
-          };
-        } else {
-          btn.setAttribute("target", "_blank");
-          btn.onclick = (e) => e.stopPropagation();
-        }
+        const btnAttrs = p.isContactTrigger
+          ? `onclick="event.stopPropagation(); saveContactTrigger('${p.contactMsg.replace(/'/g, "\\'")}')"`
+          : `target="_blank" onclick="event.stopPropagation()"`;
 
-        document.getElementById("proj-dots").innerHTML = PROJECTS.map(
-          (item, i) => `
-            <div class="dot-nav-item">
-              <button
-                type="button"
-                onclick="event.stopPropagation(); goToProject(${i})"
-                class="w-3.5 h-3.5 rounded-full border-2 border-black cursor-pointer transition-transform hover:scale-125 ${
-                  i === idx ? "bg-[#ff6b6b] scale-110" : "bg-white"
-                }"
-              ></button>
+        const zigZagLeft = `
+          <svg width="100%" height="12" viewBox="0 0 400 16" preserveAspectRatio="none">
+            <polyline points="0,12 15,3 30,12 45,3 60,12 75,3 90,12 105,3 120,12 135,3 150,12 165,3 180,12 195,3 210,12 225,3 240,12 255,3 270,12 285,3 300,12 315,3 330,12 345,3 360,12 375,3 390,12 400,6" fill="none" stroke="#000" stroke-width="4.5" />
+          </svg>
+        `;
 
-              <!-- Chrome Tab Preview Card saat Hover -->
-              <div class="chrome-tab-preview">
-                <div class="chrome-tab-bar">
-                  <span class="chrome-tab-dots"><i></i><i></i><i></i></span>
-                  <span>0${i + 1} • ${item.date}</span>
+        const zigZagRight = `
+          <svg width="100%" height="12" viewBox="0 0 600 16" preserveAspectRatio="none">
+            <polyline points="0,12 18,3 36,12 54,3 72,12 90,3 108,12 126,3 144,12 162,3 180,12 198,3 216,12 234,3 252,12 270,3 288,12 306,3 324,12 342,3 360,12 378,3 396,12 414,3 432,12 450,3 468,12 486,3 504,12 522,3 540,12 558,3 576,12 600,6" fill="none" stroke="#000" stroke-width="4.5" />
+          </svg>
+        `;
+
+        return `
+          <div class="receipt-pair-row ${isPrimary ? "is-primary-row" : "is-secondary-row"}" data-index="${actualIndex}">
+            <!-- STRUK KIRI -->
+            <div class="receipt-shadow-left" onclick="toggleFrontCard(event, this, 'left')" title="Klik untuk menimpa struk kanan">
+              <div class="receipt-jagged-left anim-drop-slide">
+                <div>${zigZagLeft}</div>
+                <div class="my-auto py-1 flex items-center justify-center">
+                  <img
+                    src="${p.promoImg}"
+                    alt="${p.title}"
+                    class="w-full h-[380px] object-contain scale-[1.08]"
+                    style="filter: drop-shadow(6px 8px 0px rgba(0, 0, 0, 0.35))"
+                  />
                 </div>
-                <img src="${item.promoImg}" alt="${item.title}" class="chrome-tab-thumb" />
-                <div class="chrome-tab-info">
-                  <div class="font-black text-[11px] leading-tight text-black truncate">
-                    ${item.title}
-                  </div>
-                  <div class="text-[9.5px] text-gray-700 mt-0.5 truncate">
-                    ${item.type}${item.isRealClient ? " • ★ Real Client" : ""}
+                <div>
+                  <div class="mb-2.5">${zigZagLeft}</div>
+                  <div class="flex items-center justify-between bg-[#ffcf33] border-2 border-black px-3 py-1.5 font-mono font-bold text-xs shadow-[3px_3px_0px_#000]">
+                    <span>${p.code}</span>
+                    <span>${p.stack}</span>
                   </div>
                 </div>
               </div>
             </div>
-          `,
+
+            <!-- STRUK KANAN -->
+            <div class="receipt-shadow-right" onclick="toggleFrontCard(event, this, 'right')" title="Klik untuk mengangkat ke depan">
+              <div class="receipt-jagged-right anim-drop-slide">
+                <div>
+                  <div class="mb-3">${zigZagRight}</div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2">${badgesHtml}</div>
+                  <h1 style="font-family: 'Handjet', monospace; font-size: 46px; font-weight: 900; line-height: 0.95; color: #000;" class="mb-2">
+                    ${p.title}
+                  </h1>
+                  <p class="font-mono text-[13px] leading-snug text-[#111] mb-1.5">${p.desc}</p>
+                  ${extraLinkHtml}
+
+                  <div class="bg-white border-[2.5px] border-black rounded-lg p-3 shadow-[4px_4px_0px_#000] mb-3">
+                    <div class="font-mono font-black text-[11px] uppercase tracking-wider mb-1 flex items-center justify-between">
+                      ${contribHeader}
+                    </div>
+                    <div class="font-mono text-[11.5px] space-y-0.5 text-black">
+                      ${contribBody}
+                    </div>
+                    <div class="mt-2 pt-1.5 border-t-2 border-dashed border-black">
+                      <div class="font-mono font-bold text-[10px] text-gray-700">
+                        Documentation (click the image)
+                      </div>
+                      <div class="doc-stamps-row">${docsHtml}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-3">${zigZagRight}</div>
+                  <div class="flex items-center justify-between">
+                    <a
+                      href="${p.btnUrl}"
+                      ${btnAttrs}
+                      class="font-mono font-black text-sm text-black bg-[#76dd77] border-[2.5px] border-black px-5 py-2 rounded-lg shadow-[4px_4px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-transform no-underline inline-flex items-center gap-2"
+                    >
+                      ${p.btnLabel}
+                    </a>
+                    <div class="bg-white border-2 border-black rounded px-3 py-1.5 shadow-[3px_3px_0px_#000] font-mono font-bold text-xs flex items-center gap-2">
+                      <i class="fas fa-hourglass-half"></i>
+                      <span>${isPrimary ? "Current View" : "History Log"}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function toggleFrontCard(e, el, side) {
+        e.stopPropagation();
+        const row = el.closest(".receipt-pair-row");
+        const left = row.querySelector(".receipt-shadow-left");
+        const right = row.querySelector(".receipt-shadow-right");
+
+        if (side === "left") {
+          right.classList.remove("is-front-navbar");
+          left.classList.toggle("is-front");
+        } else {
+          left.classList.remove("is-front");
+          right.classList.toggle("is-front-navbar");
+        }
+      }
+
+      document.addEventListener("click", () => {
+        document
+          .querySelectorAll(".is-front, .is-front-navbar")
+          .forEach((el) => el.classList.remove("is-front", "is-front-navbar"));
+      });
+
+      function renderProjects() {
+        const visibleCount = getVisibleCount();
+        const stackContainer = document.getElementById("projects-stack-list");
+
+        // Urutan tampilan:
+        // Slot 0 (Atas) = currentIndex (proyek terbaru yang dipilih)
+        // Slot 1 (Tengah) = proyek sebelumnya (currentIndex - 1)
+        // Slot 2 (Bawah) = proyek sebelumnya lagi (currentIndex - 2)
+        const activeIndices = [];
+        for (let step = 0; step < visibleCount; step++) {
+          const targetIdx =
+            (currentIndex - step + PROJECTS.length) % PROJECTS.length;
+          activeIndices.push(targetIdx);
+        }
+
+        stackContainer.innerHTML = activeIndices
+          .map((projIdx, slotPos) =>
+            buildProjectPairHTML(PROJECTS[projIdx], slotPos, projIdx),
+          )
+          .join("");
+
+        // Render titik indikator: menyala sejumlah visibleCount (3 titik di HP, 1 di desktop)
+        document.getElementById("proj-dots").innerHTML = PROJECTS.map(
+          (item, i) => {
+            const slotRank = activeIndices.indexOf(i); // 0 = utama, 1 & 2 = history yg ikut tampil
+            let dotStyle = "bg-white";
+            if (slotRank === 0) {
+              dotStyle = "bg-[#ff6b6b] scale-125 ring-2 ring-black/20";
+            } else if (slotRank > 0) {
+              dotStyle = "bg-[#ffcf33] scale-110";
+            }
+
+            return `
+              <div class="dot-nav-item">
+                <button
+                  type="button"
+                  onclick="event.stopPropagation(); goToProject(${i})"
+                  class="w-3.5 h-3.5 rounded-full border-2 border-black cursor-pointer transition-transform hover:scale-125 ${dotStyle}"
+                  title="${item.title}"
+                ></button>
+
+                <!-- Chrome Tab Preview Card saat Hover -->
+                <div class="chrome-tab-preview">
+                  <div class="chrome-tab-bar">
+                    <span class="chrome-tab-dots"><i></i><i></i><i></i></span>
+                    <span>0${i + 1} • ${item.date}</span>
+                  </div>
+                  <img src="${item.promoImg}" alt="${item.title}" class="chrome-tab-thumb" />
+                  <div class="chrome-tab-info">
+                    <div class="font-black text-[11px] leading-tight text-black truncate">
+                      ${item.title}
+                    </div>
+                    <div class="text-[9.5px] text-gray-700 mt-0.5 truncate">
+                      ${item.type}${item.isRealClient ? " • ★ Real Client" : ""}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          },
         ).join("");
       }
 
       function goToProject(i) {
         currentIndex = i;
-        renderProject(currentIndex);
+        renderProjects();
       }
 
+      // Panah Atas: mundur 1
       document.getElementById("btn-prev").addEventListener("click", (e) => {
         e.stopPropagation();
         currentIndex = (currentIndex - 1 + PROJECTS.length) % PROJECTS.length;
-        renderProject(currentIndex);
+        renderProjects();
       });
 
+      // Panah Bawah: turun/maju 1 (proyek lama terdorong ke slot 2 & 3 di bawah)
       document.getElementById("btn-next").addEventListener("click", (e) => {
         e.stopPropagation();
         currentIndex = (currentIndex + 1) % PROJECTS.length;
-        renderProject(currentIndex);
+        renderProjects();
       });
 
-      renderProject(0);
+      // Render ulang otomatis saat ukuran layar berubah
+      let lastCount = getVisibleCount();
+      window.addEventListener("resize", () => {
+        const nowCount = getVisibleCount();
+        if (nowCount !== lastCount) {
+          lastCount = nowCount;
+          renderProjects();
+        }
+      });
+
+      renderProjects();
 
       fetch("head.html")
         .then((response) => response.text())
@@ -760,17 +700,6 @@
           box.innerHTML = data;
           box.querySelectorAll("script").forEach((s) => eval(s.innerText));
         });
-
-      function triggerDropSlide() {
-        const leftJagged = document.querySelector(".receipt-jagged-left");
-        const rightJagged = document.querySelector(".receipt-jagged-right");
-        leftJagged.classList.remove("anim-drop-slide");
-        rightJagged.classList.remove("anim-drop-slide");
-        void leftJagged.offsetWidth;
-        void rightJagged.offsetWidth;
-        leftJagged.classList.add("anim-drop-slide");
-        rightJagged.classList.add("anim-drop-slide");
-      }
     </script>
   </body>
 </html>

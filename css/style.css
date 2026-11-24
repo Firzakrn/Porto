@@ -763,7 +763,7 @@ body.page-intro .canvas-content {
   zoom: 1 !important;
 }
 
-/* ============ Styling/* ============ Styling Khusus Halaman Contact ============ */
+/*  ============ Styling Halaman Contact ============ */
 body.page-contact {
   min-width: 1280px;
   background: linear-gradient(115deg, #f4d839 45%, #ffef96 88%);
